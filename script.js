@@ -252,7 +252,6 @@ function ringHTML(name, done, goal) {
 function renderDashboard() {
   const completedHours = data.categories.reduce((sum, c) => sum + totalHours(c), 0);
   const goalHours = data.categories.reduce((sum, c) => sum + Number(c.goal || 0), 0);
-  const moduleAverage = averageOfModuleTotals();
 
   dashTotalHours.textContent = completedHours;
   dashActivityProgress.textContent = `${percent(completedHours, goalHours)}%`;
