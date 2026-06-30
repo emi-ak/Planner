@@ -256,7 +256,7 @@ function renderDashboard() {
   dashTotalHours.textContent = completedHours;
   dashActivityProgress.textContent = `${percent(completedHours, goalHours)}%`;
   dashModules.textContent = data.modules.length;
-  const moduleAverage = averageOfModuleTotals();
+  
   const classification = moduleAverage ? classifyUK(Number(moduleAverage)) : "—";
   
   dashClassification.textContent =
