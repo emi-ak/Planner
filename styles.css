@@ -865,10 +865,6 @@ a {
     margin-top: 26px;
 }
 
-.year-box summary::-webkit-details-marker {
-  display: none;
-}
-
 .year-box summary {
     list-style: none;
     cursor: pointer;
@@ -885,8 +881,8 @@ a {
 
 .year-box summary::before {
     content: "▸";
-    font-size: 18px;
     justify-self: center;
+    font-size: 18px;
     transition: transform .25s ease;
 }
 
