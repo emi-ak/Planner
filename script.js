@@ -20,6 +20,7 @@ const defaultData = {
       id: crypto.randomUUID(),
       name: "Cell Biology",
       term: "Term 1",
+      year: "Year 1",
       assignments: [
         { id: crypto.randomUUID(), name: "Lab report", mark: 72, weight: 30, date: todayISO },
         { id: crypto.randomUUID(), name: "Final exam", mark: 68, weight: 70, date: todayISO }
@@ -42,6 +43,14 @@ const defaultData = {
 };
 
 let data = JSON.parse(localStorage.getItem("emsPlannerData")) || defaultData;
+
+data.modules = (data.modules || []).map(module => ({
+  ...module,
+  year: module.year || "Year 1"
+}));
+
+localStorage.setItem("emsPlannerData", JSON.stringify(data));
+
 let classificationVisible = false;
 
 function save() {
