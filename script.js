@@ -111,13 +111,25 @@ document.getElementById("mobileMenu").addEventListener("click", () => {
   sidebar.classList.toggle("open");
 });
 
+function openPage(pageName) {
+  document.querySelectorAll(".nav-link").forEach(b => b.classList.remove("active"));
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+
+  const navButton = document.querySelector(`.nav-link[data-page="${pageName}"]`);
+  const page = document.getElementById(pageName);
+
+  if (!navButton || !page) return;
+
+  navButton.classList.add("active");
+  page.classList.add("active");
+  sidebar.classList.remove("open");
+
+  localStorage.setItem("emsPlannerCurrentPage", pageName);
+}
+
 document.querySelectorAll(".nav-link").forEach(button => {
   button.addEventListener("click", () => {
-    document.querySelectorAll(".nav-link").forEach(b => b.classList.remove("active"));
-    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-    button.classList.add("active");
-    document.getElementById(button.dataset.page).classList.add("active");
-    sidebar.classList.remove("open");
+    openPage(button.dataset.page);
   });
 });
 
@@ -729,6 +741,8 @@ function renderAll() {
 }
 
 renderAll();
+
+openPage(localStorage.getItem("emsPlannerCurrentPage") || "dashboard");
 
 document.getElementById("toggleClassification").addEventListener("click", () => {
   classificationVisible = !classificationVisible;
