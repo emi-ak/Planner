@@ -828,3 +828,15 @@ a {
   background: rgba(255, 244, 250, 0.92) !important;
   color: var(--pink-700) !important;
 }
+
+.collapsible-form {
+  display: none;
+}
+
+.collapsible-form.open {
+  display: grid;
+}
+
+.form-toggle {
+  margin-bottom: 14px;
+}
