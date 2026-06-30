@@ -853,12 +853,16 @@ a {
 }
 
 .year-box {
-  margin: 18px 0;
-  padding: 18px;
+  margin: 22px 0;
+  padding: 24px;
   border-radius: 26px;
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(255, 194, 223, 0.58);
   box-shadow: var(--shadow);
+}
+
+.year-box > .category-card:first-of-type {
+    margin-top: 26px;
 }
 
 .year-box summary {
