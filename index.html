@@ -12,6 +12,16 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div id="authScreen" class="auth-screen">
+  <div class="auth-card">
+    <h1>Em's Planner</h1>
+    <p>Psalm 16:8 ✿</p>
+    <p>Your academic and personal life, beautifully organized.</p>
+
+    <button id="loginButton">Continue with Google</button>
+  </div>
+</div>
+  
   <div class="bg-orb orb-one"></div>
   <div class="bg-orb orb-two"></div>
   <div class="bg-orb orb-three"></div>
@@ -30,18 +40,10 @@
       </div>
     </div>
 
-    <div class="auth-buttons">
-
-      <button id="loginButton">
-        Continue with Google
-      </button>
-
-      <button
-          id="logoutButton"
-          style="display:none;">
-          Sign Out
-      </button>
-
+    <div class="user-card">
+      <p id="userName">Welcome back</p>
+      <small id="userEmail"></small>
+      <button id="logoutButton" class="soft-btn">Sign Out</button>
     </div>
 
     <nav>
