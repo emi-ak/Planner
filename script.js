@@ -157,6 +157,7 @@ document.getElementById("moduleForm").addEventListener("submit", e => {
     id: crypto.randomUUID(),
     name: moduleName.value,
     term: moduleTerm.value,
+    year: moduleYear.value,
     assignments: []
   });
   e.target.reset();
