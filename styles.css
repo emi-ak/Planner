@@ -851,3 +851,28 @@ a {
 .form-toggle {
   margin-bottom: 14px;
 }
+
+.year-box {
+  margin: 18px 0;
+  padding: 18px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 194, 223, 0.58);
+  box-shadow: var(--shadow);
+}
+
+.year-box summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--pink-700);
+}
+
+.year-box summary::-webkit-details-marker {
+  display: none;
+}
