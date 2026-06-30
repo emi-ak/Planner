@@ -925,3 +925,16 @@ a {
 #affirmationText {
   white-space: pre-line;
 }
+
+.auth-buttons{
+    display:grid;
+    gap:12px;
+    margin-bottom:24px;
+}
+
+#loginButton,
+#logoutButton{
+
+    width:100%;
+
+}
