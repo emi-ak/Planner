@@ -42,6 +42,7 @@ const defaultData = {
 };
 
 let data = JSON.parse(localStorage.getItem("emsPlannerData")) || defaultData;
+let classificationVisible = false;
 
 function save() {
   localStorage.setItem("emsPlannerData", JSON.stringify(data));
@@ -255,7 +256,10 @@ function renderDashboard() {
   dashTotalHours.textContent = completedHours;
   dashActivityProgress.textContent = `${percent(completedHours, goalHours)}%`;
   dashModules.textContent = data.modules.length;
-  dashClassification.textContent = moduleAverage ? classifyUK(Number(moduleAverage)) : "—";
+  const classification =
+    moduleAverage ? classifyUK(Number(moduleAverage)) : "—";
+  dashClassification.textContent =
+    classificationVisible ? classification : "••••••";
 
   dashboardRings.innerHTML = data.categories.map(c => ringHTML(c.name, totalHours(c), c.goal)).join("");
 
@@ -679,3 +683,15 @@ function renderAll() {
 }
 
 renderAll();
+
+document
+    .getElementById("toggleClassification")
+    .addEventListener("click", () => {
+
+        classificationVisible = !classificationVisible;
+
+        document.getElementById("toggleClassification").textContent =
+            classificationVisible ? "Hide" : "Show";
+
+        renderDashboard();
+    });
