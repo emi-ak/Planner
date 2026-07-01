@@ -62,21 +62,24 @@ async function save() {
   if (syncStatus) {
     syncStatus.textContent = "☁️ Saving...";
     syncStatus.classList.add("saving");
+    syncStatus.classList.remove("offline");
   }
 
   renderAll();
-
-  await new Promise(resolve => setTimeout(resolve, 600));
 
   localStorage.setItem("emsPlannerData", JSON.stringify(data));
 
   try {
     await savePlanner(data);
 
-    if (syncStatus) {
-      syncStatus.textContent = "✅ All changes saved";
-      syncStatus.classList.remove("saving", "offline");
-    }
+    setTimeout(() => {
+      const status = document.getElementById("syncStatus");
+      if (status) {
+        status.textContent = "✅ All changes saved";
+        status.classList.remove("saving", "offline");
+      }
+    }, 500);
+
   } catch (error) {
     if (syncStatus) {
       syncStatus.textContent = "📶 Offline — will sync later";
