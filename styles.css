@@ -1048,11 +1048,17 @@ a {
 }
 
 .user-card {
-  margin: 18px 0 28px;
-  padding: 14px;
+  margin: 10px 0 20px;
+  padding: 16px;
   border-radius: 20px;
   background: var(--usercard-back);
   border: 1px solid var(--border);
+}
+
+.user-card #logoutButton {
+    margin-top: 12px;
+    padding: 10px 12px;
+    font-size: 16px;
 }
 
 .user-card p {
@@ -1070,17 +1076,6 @@ a {
 
 .sidebar {
   width: 290px;
-}
-
-.user-card {
-  margin: 18px 0 28px;
-  padding: 16px;
-}
-
-.user-card #logoutButton {
-  margin-top: 12px;
-  padding: 10px 12px;
-  font-size: 16px;
 }
 
 .sync-status {
@@ -1526,26 +1521,27 @@ body.theme-orange {
 }
 
 .sidebar nav {
-  flex: 1;
+  flex: 0;
   display: grid;
   gap: 8px;
   align-content: start;
 }
 
+
 .sidebar-bottom {
-  margin-top: auto;
-  display: grid;
-  gap: 10px;
-  padding-top: 18px;
+    margin-top: 14px;
+    display: grid;
+    gap: 8px;
+    padding-top: 0;
 }
 
 .settings-button {
   width: 100%;
   background: transparent;
   color: var(--text);
-  border: 0;
+  border: 0.5px solid var(--border);
   box-shadow: none;
-  padding: 12px 14px;
+  padding: 12px 18px;
   text-align: left;
   border-radius: 14px;
   font-size: 18px;
