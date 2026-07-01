@@ -760,7 +760,3 @@ document.querySelectorAll(".theme-choice").forEach(button => {
 
 const savedTheme = localStorage.getItem("emsPlannerTheme") || "pink";
 applyTheme(savedTheme);
-
-document.querySelector(".settings-button").addEventListener("click", () => {
-  openPage("settings");
-});
