@@ -34,3 +34,10 @@
 .auth-card p {
   color: var(--muted);
 }
+
+#loginButton,
+#logoutButton{
+
+    width:100%;
+
+}
