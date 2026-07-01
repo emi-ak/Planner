@@ -176,6 +176,9 @@ document.getElementById("categoryForm").addEventListener("submit", e => {
     activities: []
   });
   e.target.reset();
+  e.target.querySelectorAll("input, textarea, select").forEach(field => {
+  localStorage.removeItem(`draft-${field.id}`);
+});
   save();
 });
 
@@ -190,6 +193,9 @@ document.getElementById("activityForm").addEventListener("submit", e => {
     notes: activityNotes.value
   });
   e.target.reset();
+  e.target.querySelectorAll("input, textarea, select").forEach(field => {
+  localStorage.removeItem(`draft-${field.id}`);
+});
   save();
 });
 
@@ -203,6 +209,9 @@ document.getElementById("timelineForm").addEventListener("submit", e => {
     notes: timelineNotes.value
   });
   e.target.reset();
+  e.target.querySelectorAll("input, textarea, select").forEach(field => {
+  localStorage.removeItem(`draft-${field.id}`);
+});
   save();
 });
 
@@ -216,6 +225,9 @@ document.getElementById("moduleForm").addEventListener("submit", e => {
     assignments: []
   });
   e.target.reset();
+  e.target.querySelectorAll("input, textarea, select").forEach(field => {
+  localStorage.removeItem(`draft-${field.id}`);
+});
   save();
 });
 
@@ -230,6 +242,9 @@ document.getElementById("assignmentForm").addEventListener("submit", e => {
     date: assignmentDate.value
   });
   e.target.reset();
+  e.target.querySelectorAll("input, textarea, select").forEach(field => {
+  localStorage.removeItem(`draft-${field.id}`);
+});
   save();
 });
 
@@ -247,6 +262,9 @@ document.getElementById("visionForm").addEventListener("submit", e => {
       quote: visionQuote.value
     });
     e.target.reset();
+    e.target.querySelectorAll("input, textarea, select").forEach(field => {
+  localStorage.removeItem(`draft-${field.id}`);
+});
     save();
   };
   reader.readAsDataURL(file);
@@ -260,6 +278,9 @@ document.getElementById("affirmationForm").addEventListener("submit", e => {
     text: newAffirmation.value
   });
   e.target.reset();
+  e.target.querySelectorAll("input, textarea, select").forEach(field => {
+  localStorage.removeItem(`draft-${field.id}`);
+});
   save();
 });
 
@@ -274,6 +295,9 @@ document.getElementById("resourceForm").addEventListener("submit", e => {
     notes: resourceNotes.value
   });
   e.target.reset();
+  e.target.querySelectorAll("input, textarea, select").forEach(field => {
+  localStorage.removeItem(`draft-${field.id}`);
+});
   save();
 });
 
@@ -288,6 +312,9 @@ document.getElementById("goalForm").addEventListener("submit", e => {
     done: false
   });
   e.target.reset();
+  e.target.querySelectorAll("input, textarea, select").forEach(field => {
+  localStorage.removeItem(`draft-${field.id}`);
+});
   save();
 });
 
@@ -834,3 +861,20 @@ window.updateAffirmation = updateAffirmation;
 window.updateResource = updateResource;
 window.updateGoal = updateGoal;
 window.toggleGoal = toggleGoal;
+
+const draftFields = document.querySelectorAll("input, textarea, select");
+
+draftFields.forEach(field => {
+  if (!field.id) return;
+
+  const savedValue = localStorage.getItem(`draft-${field.id}`);
+  if (savedValue !== null) field.value = savedValue;
+
+  field.addEventListener("input", () => {
+    localStorage.setItem(`draft-${field.id}`, field.value);
+  });
+
+  field.addEventListener("change", () => {
+    localStorage.setItem(`draft-${field.id}`, field.value);
+  });
+});
