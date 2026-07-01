@@ -1,4 +1,5 @@
 import { startAuth } from "./js/auth.js";
+import { setCurrentUser, loadPlanner, savePlanner } from "./js/database.js";
 
 const todayISO = new Date().toISOString().slice(0, 10);
 
@@ -55,8 +56,9 @@ localStorage.setItem("emsPlannerData", JSON.stringify(data));
 
 let classificationVisible = false;
 
-function save() {
+async function save() {
   localStorage.setItem("emsPlannerData", JSON.stringify(data));
+  await savePlanner(data);
   renderAll();
 }
 
@@ -778,6 +780,13 @@ document.querySelectorAll(".form-toggle").forEach(button => {
   });
 });
 
-startAuth((user) => {
+startAuth(async (user) => {
   console.log("Signed in as:", user.email);
+
+  setCurrentUser(user);
+
+  data = await loadPlanner(defaultData);
+
+  renderAll();
+  openPage(localStorage.getItem("emsPlannerCurrentPage") || "dashboard");
 });
