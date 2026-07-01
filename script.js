@@ -52,7 +52,7 @@ data.modules = (data.modules || []).map(module => ({
   year: module.year || "Year 1"
 }));
 
-localStorage.setItem("emsPlannerData", JSON.stringify(data));
+await savePlanner(data);
 
 let classificationVisible = false;
 
@@ -67,7 +67,7 @@ async function save() {
 
   renderAll();
 
-  localStorage.setItem("emsPlannerData", JSON.stringify(data));
+  await savePlanner(data);
 
   try {
     await savePlanner(data);
