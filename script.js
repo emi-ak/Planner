@@ -47,11 +47,6 @@ const defaultData = {
 
 let data = null;
 
-data.modules = (data.modules || []).map(module => ({
-  ...module,
-  year: module.year || "Year 1"
-}));
-
 let classificationVisible = false;
 
 async function save() {
@@ -838,6 +833,14 @@ startAuth(async (user) => {
 
   setCurrentUser(user);
   data = await loadPlanner(defaultData);
+
+  data.modules = (data.modules || []).map(module => ({
+    ...module,
+    year: module.year || "Year 1"
+  }));
+
+  renderAll();
+  openPage(localStorage.getItem("emsPlannerCurrentPage") || "dashboard");
 });
 
 window.toggleEdit = toggleEdit;
