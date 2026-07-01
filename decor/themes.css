@@ -157,9 +157,9 @@ body.theme-sage {
 
   --shadow: 0 24px 70px rgba(87, 99, 76, 0.16);
 
-  --primary:var(--pink-500)
-  --primary-dark: var(--pink-700)
-  --primary-light: var(--pink-300)
+  --primary:var(--pink-500);
+  --primary-dark: var(--pink-700);
+  --primary-light: var(--pink-300);
 }
 
 /*lavender theme*/ 
@@ -236,9 +236,9 @@ body.theme-lavender {
 
   --shadow: 0 24px 70px rgba(115, 92, 153, 0.16);
 
-  --primary:var(--pink-500)
-  --primary-dark: var(--pink-700)
-  --primary-light: var(--pink-300)
+  --primary:var(--pink-500);
+  --primary-dark: var(--pink-700);
+  --primary-light: var(--pink-300);
 }
 
 /*blue theme*/ 
@@ -315,9 +315,9 @@ body.theme-blue {
 
   --shadow: 0 24px 70px rgba(106, 133, 156, 0.16);
 
-  --primary:var(--pink-500)
-  --primary-dark: var(--pink-700)
-  --primary-light: var(--pink-300)
+  --primary:var(--pink-500);
+  --primary-dark: var(--pink-700);
+  --primary-light: var(--pink-300);
 }
 
 /*orange theme*/ 
@@ -394,7 +394,7 @@ body.theme-orange {
 
   --shadow: 0 24px 70px rgba(247, 166, 59, 0.16);
 
-  --primary:var(--pink-500)
-  --primary-dark: var(--pink-700)
-  --primary-light: var(--pink-300)
+  --primary:var(--pink-500);
+  --primary-dark: var(--pink-700);
+  --primary-light: var(--pink-300);
 }
