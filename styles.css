@@ -1544,7 +1544,7 @@ body.theme-orange {
   color: var(--text);
   border: 0.5px solid var(--border);
   box-shadow: none;
-  padding: 14px 15px;
+  padding: 10px 15px;
   text-align: left;
   border-radius: 14px;
   font-size: 14px;
