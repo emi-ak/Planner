@@ -152,9 +152,12 @@ function openPage(pageName) {
   const navButton = document.querySelector(`.nav-link[data-page="${pageName}"]`);
   const page = document.getElementById(pageName);
 
-  if (!navButton || !page) return;
+  if (!page) return;
 
+  if (navButton) {
   navButton.classList.add("active");
+  }
+  
   page.classList.add("active");
   sidebar.classList.remove("open");
 
@@ -904,11 +907,7 @@ const savedTheme = localStorage.getItem("emsPlannerTheme") || "pink";
 applyTheme(savedTheme);
 
 document.querySelector(".settings-button").addEventListener("click", () => {
-  document.querySelectorAll(".nav-link").forEach(b => b.classList.remove("active"));
-  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-
-  document.getElementById("settings").classList.add("active");
-  localStorage.setItem("emsPlannerCurrentPage", "settings");
+  openPage("settings");
 });
 
 applyTheme(localStorage.getItem("emsPlannerTheme") || "pink");
