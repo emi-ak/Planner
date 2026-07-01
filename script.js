@@ -64,10 +64,13 @@ async function save() {
     syncStatus.classList.add("saving");
   }
 
+  renderAll();
+
+  await new Promise(resolve => setTimeout(resolve, 600));
+
   localStorage.setItem("emsPlannerData", JSON.stringify(data));
 
   try {
-    await new Promise(resolve => setTimeout(resolve, 500));
     await savePlanner(data);
 
     if (syncStatus) {
@@ -82,6 +85,7 @@ async function save() {
 
     console.warn("Cloud save failed:", error);
   }
+}
 
   renderAll();
 }
@@ -810,6 +814,26 @@ startAuth(async (user) => {
   setCurrentUser(user);
 
   data = await loadPlanner(defaultData);
+
+  window.toggleEdit = toggleEdit;
+  window.removeById = removeById;
+  
+  window.updateActivity = updateActivity;
+  window.updateCategory = updateCategory;
+  window.deleteCategory = deleteCategory;
+  window.deleteActivity = deleteActivity;
+  
+  window.updateTimeline = updateTimeline;
+  
+  window.updateModule = updateModule;
+  window.updateAssignment = updateAssignment;
+  window.deleteAssignment = deleteAssignment;
+  
+  window.updateAffirmation = updateAffirmation;
+  window.updateResource = updateResource;
+  
+  window.updateGoal = updateGoal;
+  window.toggleGoal = toggleGoal;
 
   renderAll();
   openPage(localStorage.getItem("emsPlannerCurrentPage") || "dashboard");
