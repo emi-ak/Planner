@@ -1555,14 +1555,14 @@ body.theme-orange {
   padding: 10px 15px;
   text-align: left;
   border-radius: 18px;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1.2;
 }
 
 .settings-button .icon {
   position: absolute;
-  right: 16px;
+  right: 11px;
   width: auto;
 }
 
