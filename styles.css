@@ -1140,48 +1140,63 @@ body.theme-lavender {
   }
 }
 
-.sidebar{
-    display:flex;
-    flex-direction:column;
+.sidebar {
+  display: flex;
+  flex-direction: column;
 }
 
-.sidebar nav{
-    flex:1;
+.sidebar nav {
+  flex: 1;
+  display: grid;
+  gap: 8px;
+  align-content: start;
 }
 
-.sidebar-bottom{
-    margin-top:auto;
-    display:flex;
-    flex-direction:column;
-    gap:16px;
+.sidebar-bottom {
+  margin-top: auto;
+  display: grid;
+  gap: 12px;
+  padding-top: 18px;
 }
 
-.settings-button{
-    width:100%;
-    background:transparent;
-    border:none;
-
-    padding:12px 14px;
-
-    border-radius:12px;
-
-    text-align:left;
-
-    font-size:15px;
-    font-weight:600;
-
-    color:var(--text);
-
-    cursor:pointer;
-
-    transition:0.2s;
+.settings-button {
+  width: 100%;
+  background: transparent;
+  color: var(--text);
+  border: 0;
+  box-shadow: none;
+  padding: 12px 14px;
+  text-align: left;
+  border-radius: 14px;
+  font-size: 18px;
 }
 
-.settings-button:hover{
-    background:rgba(255,255,255,.45);
+.settings-button:hover {
+  background: rgba(255, 234, 244, 0.65);
+  transform: none;
 }
 
-.user-card{
-    border-top:1px solid rgba(0,0,0,.08);
-    padding-top:18px;
+.sync-status {
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 15px;
+}
+
+.user-card {
+  margin: 0;
+  padding: 14px;
+  border-radius: 20px;
+}
+
+.user-card p {
+  font-size: 18px;
+}
+
+.user-card small {
+  font-size: 14px;
+}
+
+#logoutButton {
+  padding: 10px 12px;
+  font-size: 16px;
 }
