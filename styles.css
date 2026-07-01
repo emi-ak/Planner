@@ -1097,39 +1097,69 @@ a {
 }
 
 body.theme-cream {
-  --pink-50: #fffdf8;
-  --pink-100: #fff5df;
-  --pink-200: #f5dfb8;
-  --pink-300: #e8c88f;
-  --pink-500: #c89445;
-  --pink-700: #8a5d1f;
-  --text: #3f3020;
-  --muted: #8b7356;
+  --pink-50: #faf9f7;
+  --pink-100: #d6d1c7;
+  --pink-200: #d2c4b5;
+  --pink-300: #bfbab2;
+  --pink-500: #999287;
+  --pink-700: #736d64;
+  --text: #36312c;
+  --muted: #918b83;
   --border: rgba(210, 170, 100, 0.42);
+  
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 210, 232, 0.95), transparent 28%),
+    radial-gradient(circle at 88% 12%, rgba(255, 236, 247, 0.95), transparent 30%),
+    linear-gradient(135deg, #f0eae1 0%, #e6dacc 42%, #fffdf8 100%);
+  display: flex;
+  overflow-x: hidden;
 }
 
 body.theme-sage {
-  --pink-50: #f8fff9;
-  --pink-100: #eaf7ec;
-  --pink-200: #cfe8d3;
-  --pink-300: #a9d1b0;
-  --pink-500: #6ba878;
-  --pink-700: #3f744b;
-  --text: #26382b;
-  --muted: #6a806f;
+  --pink-50: #dfe6da;
+  --pink-100: #cbd5c0;
+  --pink-200: #9caf88;
+  --pink-300: #819171;
+  --pink-500: #758467;
+  --pink-700: #57634c;
+  --text: #2b2e29;
+  --muted: #727571;
   --border: rgba(120, 170, 130, 0.42);
+
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 210, 232, 0.95), transparent 28%),
+    radial-gradient(circle at 88% 12%, rgba(255, 236, 247, 0.95), transparent 30%),
+    linear-gradient(135deg, #c9d4c5 0%, #b0bdac 42%, #fffdf8 100%);
+  display: flex;
+  overflow-x: hidden;
 }
 
 body.theme-lavender {
-  --pink-50: #fcf8ff;
-  --pink-100: #f3eaff;
-  --pink-200: #e1d0fb;
-  --pink-300: #c8aef0;
-  --pink-500: #9873d1;
-  --pink-700: #68459d;
-  --text: #33263d;
-  --muted: #786b8b;
+  --pink-50: #efeff8;
+  --pink-100: #d2c8e3;
+  --pink-200: #bbaed1;
+  --pink-300: #aa97c9;
+  --pink-500: #9d86c2;
+  --pink-700: #735c99;
+  --text: #4a4357;
+  --muted: #8a8396;
   --border: rgba(190, 165, 230, 0.45);
+
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 210, 232, 0.95), transparent 28%),
+    radial-gradient(circle at 88% 12%, rgba(255, 236, 247, 0.95), transparent 30%),
+    linear-gradient(135deg, #d0cadb 0%, #baabd6 42%, #fffdf8 100%);
+  display: flex;
+  overflow-x: hidden;
 }
 
 @media (min-width: 821px) {
