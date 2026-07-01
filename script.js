@@ -57,8 +57,31 @@ localStorage.setItem("emsPlannerData", JSON.stringify(data));
 let classificationVisible = false;
 
 async function save() {
+  const syncStatus = document.getElementById("syncStatus");
+
+  if (syncStatus) {
+    syncStatus.textContent = "☁️ Saving...";
+    syncStatus.classList.add("saving");
+  }
+
   localStorage.setItem("emsPlannerData", JSON.stringify(data));
-  await savePlanner(data);
+
+  try {
+    await savePlanner(data);
+
+    if (syncStatus) {
+      syncStatus.textContent = "✅ All changes saved";
+      syncStatus.classList.remove("saving", "offline");
+    }
+  } catch (error) {
+    if (syncStatus) {
+      syncStatus.textContent = "📶 Offline — will sync later";
+      syncStatus.classList.add("offline");
+    }
+
+    console.warn("Cloud save failed:", error);
+  }
+
   renderAll();
 }
 
