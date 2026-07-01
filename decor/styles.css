@@ -1,9 +1,4 @@
-.course-row {
-  display: grid;
-  gap: 8px;
-  padding: 16px;
-  border-bottom: 1px solid var(--goalborder);
-}
+
 
 .goal-row {
   display: grid;
@@ -11,11 +6,6 @@
   padding: 16px;
   border-bottom: 1px solid var(--goalborder);
 }
-
-.course-row:last-child {
-  border-bottom: 0;
-}
-
 /*------------------------------------------------------*/
 /* Activity Tracker */
 /*------------------------------------------------------*/
