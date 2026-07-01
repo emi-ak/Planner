@@ -1,17 +1,3 @@
-/* Daily Tracker */
-.activity-sublist {
-  margin-top: 14px;
-  display: grid;
-  gap: 10px;
-}
-
-.activity-pill {
-  background: var(--activitybackground);
-  border-radius: 18px;
-  padding: 13px;
-  border: 1px solid var(--activitypull-border);
-}
-
 .course-row,
 .resource-row,
 .goal-row {
@@ -26,11 +12,6 @@
   border-bottom: 0;
 }
 
-.check {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
 /*------------------------------------------------------*/
 /* Activity Tracker */
 /*------------------------------------------------------*/
@@ -181,8 +162,4 @@
 
 .item p {
   color: var(--muted);
-}
-
-.check input {
-  width: auto;
 }
