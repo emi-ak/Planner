@@ -31,6 +31,8 @@ export async function loadPlanner(defaultData) {
   });
 
   return starterData;
+
+  
 }
 
 export async function savePlanner(data) {
