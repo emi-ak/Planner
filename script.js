@@ -812,7 +812,6 @@ startAuth(async (user) => {
   console.log("Signed in as:", user.email);
 
   setCurrentUser(user);
-
   data = await loadPlanner(defaultData);
 
   renderAll();
