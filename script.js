@@ -45,14 +45,12 @@ const defaultData = {
   ]
 };
 
-let data = JSON.parse(localStorage.getItem("emsPlannerData")) || defaultData;
+let data = defaultData;
 
 data.modules = (data.modules || []).map(module => ({
   ...module,
   year: module.year || "Year 1"
 }));
-
-await savePlanner(data);
 
 let classificationVisible = false;
 
