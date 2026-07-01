@@ -1,3 +1,4 @@
+/* card + glass */
 .glass-card,
 .form-card,
 .glass-widget,
@@ -52,6 +53,21 @@
   border-radius: 26px;
   background: var(--glass);
   border: 1px solid var(--ringcard-border);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: start;
+}
+
+.item h4 {
+  margin: 0 0 4px;
+}
+
+.item p {
+  color: var(--muted);
 }
 /*------------------------------------------------------*/
 /* forms */
