@@ -1065,3 +1065,23 @@ main {
 .user-card #logoutButton {
   margin-top: 12px;
 }
+
+.sync-status {
+  margin: 0 0 24px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(255, 234, 244, 0.62);
+  border: 1px solid var(--border);
+  color: var(--pink-700);
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+}
+
+.sync-status.saving {
+  opacity: 0.75;
+}
+
+.sync-status.offline {
+  color: #8b6b7c;
+}
