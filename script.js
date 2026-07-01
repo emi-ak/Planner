@@ -883,8 +883,8 @@ function applyTheme(theme) {
   document.body.classList.remove(
     "theme-cream",
     "theme-sage",
-    "theme-lavender"
-    "theme-blue"
+    "theme-lavender",
+    "theme-blue",
     "theme-orange");
 
   if (theme !== "pink") {
