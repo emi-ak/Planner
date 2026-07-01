@@ -1106,7 +1106,11 @@ body.theme-cream {
   --text: #36312c;
   --muted: #918b83;
   --border: rgba(210, 170, 100, 0.42);
-  
+
+  --orb-1: #d2c4b5
+  --orb-2: #f2e7dc
+  --orb-3: #b0a294
+
   margin: 0;
   min-height: 100vh;
   color: var(--text);
@@ -1130,6 +1134,10 @@ body.theme-sage {
   --muted: #727571;
   --border: rgba(120, 170, 130, 0.42);
 
+  --orb-1: #cbd5c0
+  --orb-2: #d8e6ca
+  --orb-3: #9dab8e
+
   margin: 0;
   min-height: 100vh;
   color: var(--text);
@@ -1152,6 +1160,10 @@ body.theme-lavender {
   --muted: #8a8396;
   --border: rgba(190, 165, 230, 0.45);
 
+  --orb-1: #d2c8e3
+  --orb-2: #e8e1f2
+  --orb-3: #b6a9cc
+
   margin: 0;
   min-height: 100vh;
   color: var(--text);
@@ -1159,6 +1171,32 @@ body.theme-lavender {
     radial-gradient(circle at 10% 10%, rgba(255, 210, 232, 0.95), transparent 28%),
     radial-gradient(circle at 88% 12%, rgba(255, 236, 247, 0.95), transparent 30%),
     linear-gradient(135deg, #d0cadb 0%, #baabd6 42%, #fffdf8 100%);
+  display: flex;
+  overflow-x: hidden;
+}
+
+body.theme-blue {
+  --pink-50: #dceaf5;
+  --pink-100: #ccdfed;
+  --pink-200: #bfd0de;
+  --pink-300: #a5b9c9;
+  --pink-500: #8caac2;
+  --pink-700: #6a859c;
+  --text: #3a4752;
+  --muted: #84919c;
+  --border: rgba(190, 165, 230, 0.45);
+
+  --orb-1: #cad5de
+  --orb-2: #e4edf5
+  --orb-3: #b8cfe3
+
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 210, 232, 0.95), transparent 28%),
+    radial-gradient(circle at 88% 12%, rgba(255, 236, 247, 0.95), transparent 30%),
+    linear-gradient(135deg, #d4e7fc 0%, #b5cde8 42%, #fffdf8 100%);
   display: flex;
   overflow-x: hidden;
 }
