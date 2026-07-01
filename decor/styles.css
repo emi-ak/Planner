@@ -529,6 +529,23 @@ nav {
   gap: 13px;
   margin-bottom: 20px;
 }
+
+.item,
+.category-card {
+  border-radius: 26px;
+  padding: 19px;
+}
+
+.ring-card {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 16px;
+  border-radius: 26px;
+  background: var(--glass);
+  border: 1px solid var(--ringcard-border);
+}
 /*------------------------------------------------------*/
 /* forms */
 input,
@@ -1162,12 +1179,6 @@ main {
   gap: 16px;
 }
 
-.item,
-.category-card {
-  border-radius: 26px;
-  padding: 19px;
-}
-
 .item-header {
   display: flex;
   justify-content: space-between;
@@ -1186,17 +1197,6 @@ main {
 .delete {
   padding: 9px 12px;
   border-radius: 14px;
-}
-
-.ring-card {
-  display: grid;
-  place-items: center;
-  gap: 10px;
-  text-align: center;
-  padding: 16px;
-  border-radius: 26px;
-  background: var(--glass);
-  border: 1px solid var(--ringcard-border);
 }
 
 .check input {
