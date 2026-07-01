@@ -1,42 +1,38 @@
 import { auth, provider } from "./firebase.js";
 
 import {
-    signInWithPopup,
-    signOut,
-    onAuthStateChanged
+  signInWithPopup,
+  signOut,
+  onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 
 export function startAuth(onLogin) {
+  const authScreen = document.getElementById("authScreen");
+  const loginBtn = document.getElementById("loginButton");
+  const logoutBtn = document.getElementById("logoutButton");
+  const userName = document.getElementById("userName");
+  const userEmail = document.getElementById("userEmail");
 
-    const loginBtn = document.getElementById("loginButton");
-    const logoutBtn = document.getElementById("logoutButton");
+  loginBtn.onclick = async () => {
+    try {
+      await signInWithPopup(auth, provider);
+    } catch (err) {
+      alert(err.message);
+    }
+  };
 
-    loginBtn.onclick = async () => {
-        try {
-            await signInWithPopup(auth, provider);
-        } catch (err) {
-            alert(err.message);
-        }
-    };
+  logoutBtn.onclick = () => signOut(auth);
 
-    logoutBtn.onclick = () => signOut(auth);
+  onAuthStateChanged(auth, user => {
+    if (user) {
+      authScreen.classList.add("hidden");
 
-    onAuthStateChanged(auth, user => {
+      userName.textContent = user.displayName || "Welcome back";
+      userEmail.textContent = user.email || "";
 
-        if(user){
-
-            loginBtn.style.display="none";
-            logoutBtn.style.display="block";
-
-            onLogin(user);
-
-        }else{
-
-            loginBtn.style.display="block";
-            logoutBtn.style.display="none";
-
-        }
-
-    });
-
+      onLogin(user);
+    } else {
+      authScreen.classList.remove("hidden");
+    }
+  });
 }
