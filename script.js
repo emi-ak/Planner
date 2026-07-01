@@ -881,7 +881,7 @@ draftFields.forEach(field => {
 
 function applyTheme(theme) {
   document.body.classList.remove(
-    "theme-cream",
+    "theme-butter",
     "theme-sage",
     "theme-lavender",
     "theme-blue",
