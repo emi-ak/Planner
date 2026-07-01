@@ -5,56 +5,75 @@
   --pink-300: #f8aecd;
   --pink-500: #d94f93;
   --pink-700: #a82368;
+
   --cream: #fffdf8;
   --text: #3d2634;
   --muted: #8b6b7c;
+
   --glass: rgba(255, 255, 255, 0.56);
   --glass-strong: rgba(255, 255, 255, 0.76);
+
   --border: rgba(255, 194, 223, 0.58);
   --shadow: 0 24px 70px rgba(217, 79, 147, 0.16);
+
   --orb-1: #ffd3e8;
   --orb-2: #f5cede;
   --orb-3: #f9bad5;
+
   --bg-1: #fff7fb;
   --bg-2: #fff0f7;
   --bg-3: #fffdf8;
+
   --theme-button-bg: rgba(255, 234, 244, 0.85);
-  --logoborder: rgba(255, 194, 223, 0.7);
+
+  --logoborder: rgba(255, 194, 223, 0.70);
   --logoshadow: rgba(217, 79, 147, 0.16);
+
   --nav-link-background: rgba(255, 234, 244, 0.84);
   --nav-link-border: rgba(217, 79, 147, 0.15);
+
   --textarea-border: rgba(217, 79, 147, 0.18);
   --textarea-background: rgba(255, 250, 253, 0.78);
-  --focusboxshadow: rgba(217, 79, 147, 0.1);
-  --softbtn-background: rgba(255, 234, 244, 0.9);
+  --focusboxshadow: rgba(217, 79, 147, 0.10);
+
+  --softbtn-background: rgba(255, 234, 244, 0.90);
   --softbtn-border: rgba(217, 79, 147, 0.14);
+
   --ringcard-border: rgba(255, 194, 223, 0.45);
   --progress-ring-gradient: rgba(255, 226, 240, 0.95);
+
   --actvitybackground: rgba(255, 244, 250, 0.74);
-  --activitypull-border: rgba(217, 79, 147, 0.1);
+  --activitypull-border: rgba(217, 79, 147, 0.10);
+
   --badge-background: rgba(255, 234, 244, 0.92);
   --goalborder: rgba(255, 194, 223, 0.45);
   --pinoutline: rgba(217, 79, 147, 0.32);
+
   --editpanel-background: rgba(255, 250, 253, 0.72);
   --editpanel-border: rgba(217, 79, 147, 0.14);
+
   --gradescale-border: rgba(217, 79, 147, 0.14);
   --gradescale-background: rgba(255, 234, 244, 0.76);
+
   --assignmentcard-border: rgba(217, 79, 147, 0.13);
   --assignmentcard-background: rgba(255, 244, 250, 0.74);
-  --modulesummarybackground:rgba(255, 234, 244, 0.84);
-  --pinplaceholder-background:rgba(255, 234, 244, 0.72);
+
+  --modulesummarybackground: rgba(255, 234, 244, 0.84);
+  --pinplaceholder-background: rgba(255, 234, 244, 0.72);
+
   --importancehigh-background: rgba(217, 79, 147, 0.92);
   --importancemed-background: rgba(255, 209, 229, 0.92);
   --importancelow-background: rgba(255, 244, 250, 0.92);
+
   --yearbox-border: rgba(255, 194, 223, 0.58);
   --usercard-back: rgba(255, 234, 244, 0.65);
   --syncback: rgba(255, 234, 244, 0.62);
-  
+
   --sidebar-background: rgba(255, 255, 255, 0.48);
   --hero-background: rgba(255, 255, 255, 0.44);
-  --ring-center: rgba(255, 255, 255, 0.9);
+  --ring-center: rgba(255, 255, 255, 0.90);
   --settings-hover: rgba(255, 234, 244, 0.65);
-  --yearbox-background: rgba(255, 255, 255, 0.5);
+  --yearbox-background: rgba(255, 255, 255, 0.50);
 }
 
 * {
@@ -1212,13 +1231,13 @@ body.theme-cream {
   --usercard-back: rgba(242, 231, 220, 0.65);
   --syncback: rgba(242, 231, 220, 0.62);
 
+  --glass: rgba(255, 252, 248, 0.56);
+  --glass-strong: rgba(255, 252, 248, 0.76);
   --sidebar-background: rgba(255, 252, 248, 0.48);
   --hero-background: rgba(255, 250, 246, 0.44);
   --ring-center: rgba(255, 253, 250, 0.90);
   --settings-hover: rgba(242, 231, 220, 0.65);
   --yearbox-background: rgba(255, 252, 248, 0.50);
-  --glass: rgba(255, 252, 248, 0.56);
-  --glass-strong: rgba(255, 252, 248, 0.76);
 }
 
 body.theme-sage {
@@ -1284,13 +1303,13 @@ body.theme-sage {
   --usercard-back: rgba(230, 242, 231, 0.65);
   --syncback: rgba(230, 242, 231, 0.62);
 
+  --glass: rgba(244, 249, 241, 0.56);
+  --glass-strong: rgba(244, 249, 241, 0.76);
   --sidebar-background: rgba(247, 250, 245, 0.48);
   --hero-background: rgba(244, 249, 241, 0.44);
   --ring-center: rgba(251, 253, 250, 0.90);
   --settings-hover: rgba(230, 242, 231, 0.65);
   --yearbox-background: rgba(247, 250, 245, 0.50);
-  --glass: rgba(244, 249, 241, 0.56);
-  --glass-strong: rgba(244, 249, 241, 0.76);
 }
 
 body.theme-lavender {
@@ -1356,13 +1375,13 @@ body.theme-lavender {
   --usercard-back: rgba(239, 232, 248, 0.65);
   --syncback: rgba(239, 232, 248, 0.62);
 
+  --glass: rgba(248, 245, 252, 0.56);
+  --glass-strong: rgba(248, 245, 252, 0.76);
   --sidebar-background: rgba(249, 247, 252, 0.48);
   --hero-background: rgba(248, 245, 252, 0.44);
   --ring-center: rgba(252, 251, 254, 0.90);
   --settings-hover: rgba(239, 232, 248, 0.65);
   --yearbox-background: rgba(249, 247, 252, 0.50);
-  --glass: rgba(248, 245, 252, 0.56);
-  --glass-strong: rgba(248, 245, 252, 0.76);
 }
 
 body.theme-blue {
@@ -1428,13 +1447,13 @@ body.theme-blue {
   --usercard-back: rgba(230, 241, 255, 0.65);
   --syncback: rgba(230, 241, 255, 0.62);
 
+  --glass: rgba(244, 249, 255, 0.56);
+  --glass-strong: rgba(244, 249, 255, 0.76);
   --sidebar-background: rgba(247, 250, 254, 0.48);
   --hero-background: rgba(244, 249, 255, 0.44);
   --ring-center: rgba(252, 253, 255, 0.90);
   --settings-hover: rgba(230, 241, 255, 0.65);
   --yearbox-background: rgba(247, 250, 254, 0.50);
-  --glass: rgba(244, 249, 255, 0.56);
-  --glass-strong: rgba(244, 249, 255, 0.76);
 }
 
 body.theme-orange {
@@ -1500,13 +1519,13 @@ body.theme-orange {
   --usercard-back: rgba(255, 242, 224, 0.65);
   --syncback: rgba(255, 242, 224, 0.62);
 
+  --glass: rgba(255, 248, 240, 0.56);
+  --glass-strong: rgba(255, 248, 240, 0.76);
   --sidebar-background: rgba(255, 250, 245, 0.48);
   --hero-background: rgba(255, 248, 240, 0.44);
   --ring-center: rgba(255, 253, 250, 0.90);
   --settings-hover: rgba(255, 242, 224, 0.65);
   --yearbox-background: rgba(255, 250, 245, 0.50);
-  --glass: rgba(255, 248, 240, 0.56);
-  --glass-strong: rgba(255, 248, 240, 0.76);
 
 }
 
