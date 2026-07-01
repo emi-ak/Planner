@@ -18,7 +18,38 @@
   --bg-1: #fff7fb;
   --bg-2: #fff0f7;
   --bg-3: #fffdf8;
-  --theme-button-bg: rgba(255, 234, 244, 0.85)
+  --theme-button-bg: rgba(255, 234, 244, 0.85);
+  --logoborder: rgba(255, 194, 223, 0.7);
+  --logoshadow: rgba(217, 79, 147, 0.16);
+  --nav-link-background: rgba(255, 234, 244, 0.84);
+  --nav-link-border: rgba(217, 79, 147, 0.15);
+  --textarea-border: rgba(217, 79, 147, 0.18);
+  --textarea-background: rgba(255, 250, 253, 0.78);
+  --focusboxshadow: rgba(217, 79, 147, 0.1);
+  --softbtn-background: rgba(255, 234, 244, 0.9);
+  --softbtn-border: rgba(217, 79, 147, 0.14);
+  --ringcard-border: rgba(255, 194, 223, 0.45);
+  --progress-ring-gradient: rgba(255, 226, 240, 0.95);
+  --actvitybackground: rgba(255, 244, 250, 0.74);
+  --activitypull-border: rgba(217, 79, 147, 0.1);
+  --badge-background: rgba(255, 234, 244, 0.92)
+  --goalborder: rgba(255, 194, 223, 0.45);
+  --pinoutline: rgba(217, 79, 147, 0.32);
+  --editpanel-background: rgba(255, 250, 253, 0.72);
+  --editpanel-border: rgba(217, 79, 147, 0.14);
+  --gradescale-border: rgba(217, 79, 147, 0.14);
+  --gradescale-background: rgba(255, 234, 244, 0.76);
+  --assignmentcard-border: rgba(217, 79, 147, 0.13);
+  --assignmentcard-background: rgba(255, 244, 250, 0.74);
+  --modulesummarybackground:rgba(255, 234, 244, 0.84);
+  --pinplaceholder-background:rgba(255, 234, 244, 0.72);
+  --importancehigh-background: rgba(217, 79, 147, 0.92);
+  --importancemed-background: rgba(255, 209, 229, 0.92);
+  --importancelow-background: rgba(255, 244, 250, 0.92);
+  --yearbox-border: rgba(255, 194, 223, 0.58);
+  --usercard-back: rgba(255, 234, 244, 0.65);
+  --syncback: rgba(255, 234, 244, 0.62);
+  
 }
 
 * {
@@ -137,8 +168,9 @@ main {
   align-items: center;
 
   background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(255, 194, 223, 0.7);
-  box-shadow: 0 10px 22px rgba(217, 79, 147, 0.16);
+  border: 1px solid var(--logoborder);
+  box-shadow: 0 10px 22px var(--logoshadow);
+  
 }
 
 .logo img {
@@ -180,9 +212,9 @@ nav {
 
 .nav-link:hover,
 .nav-link.active {
-  background: rgba(255, 234, 244, 0.84);
+  background: var(--nav-link-background);
   color: var(--pink-700);
-  border-color: rgba(217, 79, 147, 0.15);
+  border-color: var(--nav-link-border);
   transform: translateX(3px);
 }
 
@@ -356,11 +388,11 @@ input,
 textarea,
 select {
   width: 100%;
-  border: 1px solid rgba(217, 79, 147, 0.18);
+  border: 1px solid var(--textarea-border);
   border-radius: 18px;
   padding: 13px 15px;
   font-size: 18px;
-  background: rgba(255, 250, 253, 0.78);
+  background: var(--textarea-background);
   color: var(--text);
   outline: none;
 }
@@ -369,7 +401,7 @@ input:focus,
 textarea:focus,
 select:focus {
   border-color: var(--pink-500);
-  box-shadow: 0 0 0 4px rgba(217, 79, 147, 0.1);
+  box-shadow: 0 0 0 4px var(--focusboxshadow);
 }
 
 textarea {
@@ -396,9 +428,9 @@ button:hover {
 
 .soft-btn,
 .delete {
-  background: rgba(255, 234, 244, 0.9);
+  background: var(--softbtn-background);
   color: var(--pink-700);
-  border: 1px solid rgba(217, 79, 147, 0.14);
+  border: 1px solid var(--softbtn-border);
 }
 
 .stack {
@@ -446,7 +478,7 @@ button:hover {
   padding: 16px;
   border-radius: 26px;
   background: rgba(255, 255, 255, 0.42);
-  border: 1px solid rgba(255, 194, 223, 0.45);
+  border: 1px solid var(--ringcard-border);
 }
 
 .progress-ring {
@@ -458,7 +490,7 @@ button:hover {
   place-items: center;
   background:
     radial-gradient(closest-side, rgba(255, 255, 255, 0.9) 73%, transparent 74% 100%),
-    conic-gradient(var(--pink-500) calc(var(--value) * 1%), rgba(255, 226, 240, 0.95) 0);
+    conic-gradient(var(--pink-500) calc(var(--value) * 1%), var(--progress-ring-gradient) 0);
   animation: ringPop 0.75s ease both;
 }
 
@@ -497,10 +529,10 @@ button:hover {
 }
 
 .activity-pill {
-  background: rgba(255, 244, 250, 0.74);
+  background: var(--activitybackground);
   border-radius: 18px;
   padding: 13px;
-  border: 1px solid rgba(217, 79, 147, 0.1);
+  border: 1px solid var(--activitypull-border);
 }
 
 .timeline {
@@ -515,7 +547,7 @@ button:hover {
 }
 
 .badge {
-  background: rgba(255, 234, 244, 0.92);
+  background: var(--badge-background);
   color: var(--pink-700);
   border-radius: 999px;
   padding: 5px 12px;
@@ -529,7 +561,7 @@ button:hover {
   display: grid;
   gap: 8px;
   padding: 16px;
-  border-bottom: 1px solid rgba(255, 194, 223, 0.45);
+  border-bottom: 1px solid var(--goalborder);
 }
 
 .course-row:last-child,
@@ -571,7 +603,7 @@ button:hover {
 }
 
 .pin.drag-over {
-  outline: 3px dashed rgba(217, 79, 147, 0.32);
+  outline: 3px dashed var(--pinoutline);
 }
 
 .pin img {
@@ -713,8 +745,8 @@ a {
   margin-top: 12px;
   padding: 14px;
   border-radius: 20px;
-  background: rgba(255, 250, 253, 0.72);
-  border: 1px solid rgba(217, 79, 147, 0.14);
+  background: var(--editpanel-background);
+  border: 1px solid var(--editpanel-border);
 }
 
 .edit-panel.open {
@@ -740,8 +772,8 @@ a {
 }
 
 .grade-scale span {
-  border: 1px solid rgba(217, 79, 147, 0.14);
-  background: rgba(255, 234, 244, 0.76);
+  border: 1px solid var(--gradescale-border);
+  background: var(--gradescale-background);
   border-radius: 16px;
   padding: 10px 12px;
   color: var(--pink-700);
@@ -756,8 +788,8 @@ a {
 }
 
 .assignment-card {
-  border: 1px solid rgba(217, 79, 147, 0.13);
-  background: rgba(255, 244, 250, 0.74);
+  border: 1px solid var(--assignmentcard-border);
+  background: var(--assignmentcard-background);
   border-radius: 20px;
   padding: 14px;
 }
@@ -770,7 +802,7 @@ a {
 }
 
 .module-summary span {
-  background: rgba(255, 234, 244, 0.84);
+  background: var(--modulesummarybackground);
   color: var(--pink-700);
   border-radius: 999px;
   padding: 6px 11px;
@@ -801,7 +833,7 @@ a {
   border-radius: 20px;
   display: grid;
   place-items: center;
-  background: rgba(255, 234, 244, 0.72);
+  background: var(pinplaceholder-background);
   color: var(--pink-700);
   font-size: 42px;
 }
@@ -840,17 +872,17 @@ a {
 }
 
 .importance-high {
-  background: rgba(217, 79, 147, 0.92) !important;
+  background: var(--importancehigh-background) !important;
   color: white !important;
 }
 
 .importance-medium {
-  background: rgba(255, 209, 229, 0.92) !important;
+  background: var(--importancemed-background) !important;
   color: var(--pink-700) !important;
 }
 
 .importance-low {
-  background: rgba(255, 244, 250, 0.92) !important;
+  background: var(--importancelow-background) !important;
   color: var(--pink-700) !important;
 }
 
@@ -871,7 +903,7 @@ a {
   padding: 24px;
   border-radius: 26px;
   background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 194, 223, 0.58);
+  border: 1px solid var(--yearbox-border);
   box-shadow: var(--shadow);
 }
 
@@ -987,7 +1019,7 @@ a {
   margin: 18px 0 28px;
   padding: 14px;
   border-radius: 20px;
-  background: rgba(255, 234, 244, 0.65);
+  background: var(--usercard-back);
   border: 1px solid var(--border);
 }
 
@@ -1045,7 +1077,7 @@ a {
   margin: 18px 0 28px;
   padding: 14px;
   border-radius: 20px;
-  background: rgba(255, 234, 244, 0.65);
+  background: var(--usercard-back);
   border: 1px solid var(--border);
 }
 
@@ -1079,7 +1111,7 @@ a {
   margin: 0 0 24px;
   padding: 10px 12px;
   border-radius: 16px;
-  background: rgba(255, 234, 244, 0.62);
+  background: var(--syncback);
   border: 1px solid var(--border);
   color: var(--pink-700);
   font-weight: 700;
@@ -1095,6 +1127,7 @@ a {
   color: #8b6b7c;
 }
 
+theme 
 .theme-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(180px, 1fr));
@@ -1115,16 +1148,64 @@ body.theme-cream {
   --pink-300: #bfbab2;
   --pink-500: #999287;
   --pink-700: #736d64;
+  
   --text: #36312c;
   --muted: #918b83;
   --border: rgba(210, 170, 100, 0.42);
+  
   --orb-1: #d2c4b5;
   --orb-2: #f2e7dc;
   --orb-3: #b0a294;
+  
   --bg-1: #f0eae1;
   --bg-2: #e6dacc;
   --bg-3: #fffdf8;  
-  --theme-button-bg: rgba(214, 209, 199, 0.85)
+  --theme-button-bg: rgba(214, 209, 199, 0.85);
+
+  --logoborder: rgba(209, 199, 180, 0.70);
+  --logoshadow: rgba(176, 162, 148, 0.18);
+  
+  --nav-link-background: rgba(242, 231, 220, 0.84);
+  --nav-link-border: rgba(191, 186, 178, 0.18);
+  
+  --textarea-border: rgba(191, 186, 178, 0.22);
+  --textarea-background: rgba(250, 249, 247, 0.78);
+  --focusboxshadow: rgba(153, 146, 135, 0.12);
+  
+  --softbtn-background: rgba(242, 231, 220, 0.90);
+  --softbtn-border: rgba(191, 186, 178, 0.18);
+  
+  --ringcard-border: rgba(210, 196, 181, 0.45);
+  --progress-ring-gradient: rgba(230, 218, 204, 0.95);
+  
+  --actvitybackground: rgba(250, 245, 239, 0.74);
+  --activitypull-border: rgba(191, 186, 178, 0.14);
+  
+  --badge-background: rgba(242, 231, 220, 0.92);
+  
+  --goalborder: rgba(210, 196, 181, 0.45);
+  --pinoutline: rgba(153, 146, 135, 0.32);
+  
+  --editpanel-background: rgba(250, 249, 247, 0.72);
+  --editpanel-border: rgba(191, 186, 178, 0.16);
+  
+  --gradescale-border: rgba(191, 186, 178, 0.16);
+  --gradescale-background: rgba(242, 231, 220, 0.76);
+  
+  --assignmentcard-border: rgba(191, 186, 178, 0.14);
+  --assignmentcard-background: rgba(250, 245, 239, 0.74);
+  
+  --modulesummarybackground: rgba(242, 231, 220, 0.84);
+  --pinplaceholder-background: rgba(242, 231, 220, 0.72);
+  
+  --importancehigh-background: rgba(115, 109, 100, 0.92);
+  --importancemed-background: rgba(210, 196, 181, 0.92);
+  --importancelow-background: rgba(250, 245, 239, 0.92);
+  
+  --yearbox-border: rgba(210, 196, 181, 0.58);
+  
+  --usercard-back: rgba(242, 231, 220, 0.65);
+  --syncback: rgba(242, 231, 220, 0.62);
 }
 
 body.theme-sage {
@@ -1143,7 +1224,52 @@ body.theme-sage {
   --bg-1: #c9d4c5;
   --bg-2: #b0bdac;
   --bg-3: #fffdf8;  
-  --theme-button-bg: rgba(230, 242, 231, 0.85)
+  --theme-button-bg: rgba(230, 242, 231, 0.85);
+
+  --logoborder: rgba(203, 213, 192, 0.70);
+  --logoshadow: rgba(117, 132, 103, 0.16);
+  
+  --nav-link-background: rgba(230, 242, 231, 0.84);
+  --nav-link-border: rgba(117, 132, 103, 0.15);
+  
+  --textarea-border: rgba(117, 132, 103, 0.18);
+  --textarea-background: rgba(248, 251, 247, 0.78);
+  --focusboxshadow: rgba(117, 132, 103, 0.10);
+  
+  --softbtn-background: rgba(230, 242, 231, 0.90);
+  --softbtn-border: rgba(117, 132, 103, 0.14);
+  
+  --ringcard-border: rgba(203, 213, 192, 0.45);
+  --progress-ring-gradient: rgba(216, 230, 202, 0.95);
+  
+  --actvitybackground: rgba(244, 249, 241, 0.74);
+  --activitypull-border: rgba(117, 132, 103, 0.10);
+  
+  --badge-background: rgba(230, 242, 231, 0.92);
+  
+  --goalborder: rgba(203, 213, 192, 0.45);
+  --pinoutline: rgba(117, 132, 103, 0.32);
+  
+  --editpanel-background: rgba(248, 251, 247, 0.72);
+  --editpanel-border: rgba(117, 132, 103, 0.14);
+  
+  --gradescale-border: rgba(117, 132, 103, 0.14);
+  --gradescale-background: rgba(230, 242, 231, 0.76);
+  
+  --assignmentcard-border: rgba(117, 132, 103, 0.13);
+  --assignmentcard-background: rgba(244, 249, 241, 0.74);
+  
+  --modulesummarybackground: rgba(230, 242, 231, 0.84);
+  --pinplaceholder-background: rgba(230, 242, 231, 0.72);
+  
+  --importancehigh-background: rgba(87, 99, 76, 0.92);
+  --importancemed-background: rgba(156, 175, 136, 0.92);
+  --importancelow-background: rgba(244, 249, 241, 0.92);
+  
+  --yearbox-border: rgba(203, 213, 192, 0.58);
+  
+  --usercard-back: rgba(230, 242, 231, 0.65);
+  --syncback: rgba(230, 242, 231, 0.62);
 }
 
 body.theme-lavender {
@@ -1162,7 +1288,52 @@ body.theme-lavender {
   --bg-1: #d0cadb;
   --bg-2: #baabd6;
   --bg-3: #fffdf8;  
-  --theme-button-bg: rgba(239, 232, 248, 0.85)
+  --theme-button-bg: rgba(239, 232, 248, 0.85);
+
+  --logoborder: rgba(210, 200, 227, 0.70);
+  --logoshadow: rgba(157, 134, 194, 0.16);
+  
+  --nav-link-background: rgba(239, 232, 248, 0.84);
+  --nav-link-border: rgba(157, 134, 194, 0.15);
+  
+  --textarea-border: rgba(157, 134, 194, 0.18);
+  --textarea-background: rgba(251, 249, 254, 0.78);
+  --focusboxshadow: rgba(157, 134, 194, 0.10);
+  
+  --softbtn-background: rgba(239, 232, 248, 0.90);
+  --softbtn-border: rgba(157, 134, 194, 0.14);
+  
+  --ringcard-border: rgba(210, 200, 227, 0.45);
+  --progress-ring-gradient: rgba(232, 225, 242, 0.95);
+  
+  --actvitybackground: rgba(248, 245, 252, 0.74);
+  --activitypull-border: rgba(157, 134, 194, 0.10);
+  
+  --badge-background: rgba(239, 232, 248, 0.92);
+  
+  --goalborder: rgba(210, 200, 227, 0.45);
+  --pinoutline: rgba(157, 134, 194, 0.32);
+  
+  --editpanel-background: rgba(251, 249, 254, 0.72);
+  --editpanel-border: rgba(157, 134, 194, 0.14);
+  
+  --gradescale-border: rgba(157, 134, 194, 0.14);
+  --gradescale-background: rgba(239, 232, 248, 0.76);
+  
+  --assignmentcard-border: rgba(157, 134, 194, 0.13);
+  --assignmentcard-background: rgba(248, 245, 252, 0.74);
+  
+  --modulesummarybackground: rgba(239, 232, 248, 0.84);
+  --pinplaceholder-background: rgba(239, 232, 248, 0.72);
+  
+  --importancehigh-background: rgba(115, 92, 153, 0.92);
+  --importancemed-background: rgba(187, 174, 209, 0.92);
+  --importancelow-background: rgba(248, 245, 252, 0.92);
+  
+  --yearbox-border: rgba(210, 200, 227, 0.58);
+  
+  --usercard-back: rgba(239, 232, 248, 0.65);
+  --syncback: rgba(239, 232, 248, 0.62);
 }
 
 body.theme-blue {
@@ -1174,14 +1345,59 @@ body.theme-blue {
   --pink-700: #6a859c;
   --text: #3a4752;
   --muted: #84919c;
-  --border: rgba(190, 165, 230, 0.45);
+  --border: rgba(204, 223, 237, 0.45);
   --orb-1: #cad5de;
   --orb-2: #e4edf5;
   --orb-3: #b8cfe3;
   --bg-1: #d4e7fc;
   --bg-2: #b5cde8;
   --bg-3: #fffdf8;  
-  --theme-button-bg: rgba(230, 241, 255, 0.85)
+  --theme-button-bg: rgba(230, 241, 255, 0.85);
+  
+  --logoborder: rgba(204, 223, 237, 0.70);
+  --logoshadow: rgba(140, 170, 194, 0.16);
+  
+  --nav-link-background: rgba(230, 241, 255, 0.84);
+  --nav-link-border: rgba(140, 170, 194, 0.15);
+  
+  --textarea-border: rgba(140, 170, 194, 0.18);
+  --textarea-background: rgba(250, 252, 255, 0.78);
+  --focusboxshadow: rgba(140, 170, 194, 0.10);
+  
+  --softbtn-background: rgba(230, 241, 255, 0.90);
+  --softbtn-border: rgba(140, 170, 194, 0.14);
+  
+  --ringcard-border: rgba(204, 223, 237, 0.45);
+  --progress-ring-gradient: rgba(228, 237, 245, 0.95);
+  
+  --actvitybackground: rgba(244, 249, 255, 0.74);
+  --activitypull-border: rgba(140, 170, 194, 0.10);
+  
+  --badge-background: rgba(230, 241, 255, 0.92);
+  
+  --goalborder: rgba(204, 223, 237, 0.45);
+  --pinoutline: rgba(140, 170, 194, 0.32);
+  
+  --editpanel-background: rgba(250, 252, 255, 0.72);
+  --editpanel-border: rgba(140, 170, 194, 0.14);
+  
+  --gradescale-border: rgba(140, 170, 194, 0.14);
+  --gradescale-background: rgba(230, 241, 255, 0.76);
+  
+  --assignmentcard-border: rgba(140, 170, 194, 0.13);
+  --assignmentcard-background: rgba(244, 249, 255, 0.74);
+  
+  --modulesummarybackground: rgba(230, 241, 255, 0.84);
+  --pinplaceholder-background: rgba(230, 241, 255, 0.72);
+  
+  --importancehigh-background: rgba(106, 133, 156, 0.92);
+  --importancemed-background: rgba(191, 208, 222, 0.92);
+  --importancelow-background: rgba(244, 249, 255, 0.92);
+  
+  --yearbox-border: rgba(204, 223, 237, 0.58);
+  
+  --usercard-back: rgba(230, 241, 255, 0.65);
+  --syncback: rgba(230, 241, 255, 0.62);
 }
 
 body.theme-orange {
@@ -1193,14 +1409,60 @@ body.theme-orange {
   --pink-700: #f7a63b;
   --text: #4f3006;
   --muted: #915709;
-  --border: rgba(190, 165, 230, 0.45);
+  --border: rgba(240, 197, 141, 0.45);
   --orb-1: #f0d9bb;
   --orb-2: #ffbf80;
   --orb-3: #f5912f;
   --bg-1: #fcd9b6;
   --bg-2: #fac38c;
   --bg-3: #fffdf8; 
-  --theme-button-bg: rgba(255, 242, 224, 0.85)
+  --theme-button-bg: rgba(255, 242, 224, 0.85);
+
+  --logoborder: rgba(240, 197, 141, 0.70);
+  --logoshadow: rgba(245, 177, 88, 0.16);
+  
+  --nav-link-background: rgba(255, 242, 224, 0.84);
+  --nav-link-border: rgba(245, 177, 88, 0.15);
+  
+  --textarea-border: rgba(245, 177, 88, 0.18);
+  --textarea-background: rgba(255, 251, 247, 0.78);
+  --focusboxshadow: rgba(245, 177, 88, 0.10);
+  
+  --softbtn-background: rgba(255, 242, 224, 0.90);
+  --softbtn-border: rgba(245, 177, 88, 0.14);
+  
+  --ringcard-border: rgba(240, 197, 141, 0.45);
+  --progress-ring-gradient: rgba(255, 219, 179, 0.95);
+  
+  --actvitybackground: rgba(255, 248, 240, 0.74);
+  --activitypull-border: rgba(245, 177, 88, 0.10);
+  
+  --badge-background: rgba(255, 242, 224, 0.92);
+  
+  --goalborder: rgba(240, 197, 141, 0.45);
+  --pinoutline: rgba(245, 177, 88, 0.32);
+  
+  --editpanel-background: rgba(255, 251, 247, 0.72);
+  --editpanel-border: rgba(245, 177, 88, 0.14);
+  
+  --gradescale-border: rgba(245, 177, 88, 0.14);
+  --gradescale-background: rgba(255, 242, 224, 0.76);
+  
+  --assignmentcard-border: rgba(245, 177, 88, 0.13);
+  --assignmentcard-background: rgba(255, 248, 240, 0.74);
+  
+  --modulesummarybackground: rgba(255, 242, 224, 0.84);
+  --pinplaceholder-background: rgba(255, 242, 224, 0.72);
+  
+  --importancehigh-background: rgba(247, 166, 59, 0.92);
+  --importancemed-background: rgba(240, 197, 141, 0.92);
+  --importancelow-background: rgba(255, 248, 240, 0.92);
+  
+  --yearbox-border: rgba(240, 197, 141, 0.58);
+  
+  --usercard-back: rgba(255, 242, 224, 0.65);
+  --syncback: rgba(255, 242, 224, 0.62);
+
 }
 
 @media (min-width: 821px) {
