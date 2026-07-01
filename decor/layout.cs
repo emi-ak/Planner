@@ -1,3 +1,94 @@
+
+/* Overall Design */
+.bg-orb {
+  position: fixed;
+  border-radius: 999px;
+  filter: blur(4px);
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+  animation: float 7s ease-in-out infinite;
+}
+
+.orb-one {
+  width: 280px;
+  height: 280px;
+  background: var(--orb-1);
+  left: 20%;
+  top: 8%;
+}
+
+.orb-two {
+  width: 220px;
+  height: 220px;
+  background: var(--orb-2);
+  right: 8%;
+  top: 28%;
+  animation-delay: 1.4s;
+}
+
+.orb-three {
+  width: 260px;
+  height: 260px;
+  background: var(--orb-3);
+  right: 22%;
+  bottom: 4%;
+  animation-delay: 2.2s;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: "Cormorant Garamond", serif;
+}
+
+a {
+  color: var(--pink-700);
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  letter-spacing: 0.015em;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 0.95;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.03); }
+}
+
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ringPop {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
 /* main header */
 .page-header {
   display: flex;
