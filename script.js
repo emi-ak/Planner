@@ -55,37 +55,34 @@ data.modules = (data.modules || []).map(module => ({
 let classificationVisible = false;
 
 async function save() {
-  const syncStatus = document.getElementById("syncStatus");
+    const syncStatus = document.getElementById("syncStatus");
 
-  if (syncStatus) {
-    syncStatus.textContent = "☁️ Saving...";
-    syncStatus.classList.add("saving");
-    syncStatus.classList.remove("offline");
-  }
-
-  renderAll();
-
-  await savePlanner(data);
-
-  try {
-    await savePlanner(data);
-
-    setTimeout(() => {
-      const status = document.getElementById("syncStatus");
-      if (status) {
-        status.textContent = "✅ All changes saved";
-        status.classList.remove("saving", "offline");
-      }
-    }, 500);
-
-  } catch (error) {
     if (syncStatus) {
-      syncStatus.textContent = "📶 Offline — will sync later";
-      syncStatus.classList.add("offline");
+        syncStatus.textContent = "☁️ Saving...";
+        syncStatus.classList.add("saving");
+        syncStatus.classList.remove("offline");
     }
 
-    console.warn("Cloud save failed:", error);
-  }
+    renderAll();
+
+    try {
+        await savePlanner(data);
+
+        setTimeout(() => {
+            if (syncStatus) {
+                syncStatus.textContent = "✅ All changes saved";
+                syncStatus.classList.remove("saving", "offline");
+            }
+        }, 500);
+
+    } catch (error) {
+        if (syncStatus) {
+            syncStatus.textContent = "📶 Offline — will sync later";
+            syncStatus.classList.add("offline");
+        }
+
+        console.warn("Cloud save failed:", error);
+    }
 }
 
   renderAll();
