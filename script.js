@@ -815,6 +815,10 @@ startAuth(async (user) => {
 
   data = await loadPlanner(defaultData);
 
+  renderAll();
+  openPage(localStorage.getItem("emsPlannerCurrentPage") || "dashboard");
+});
+
   window.toggleEdit = toggleEdit;
   window.removeById = removeById;
   
@@ -834,7 +838,3 @@ startAuth(async (user) => {
   
   window.updateGoal = updateGoal;
   window.toggleGoal = toggleGoal;
-
-  renderAll();
-  openPage(localStorage.getItem("emsPlannerCurrentPage") || "dashboard");
-});
