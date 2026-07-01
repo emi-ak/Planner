@@ -45,7 +45,7 @@ const defaultData = {
   ]
 };
 
-let data = defaultData;
+let data = null;
 
 data.modules = (data.modules || []).map(module => ({
   ...module,
@@ -796,6 +796,8 @@ function escapeHTML(value) {
 }
 
 function renderAll() {
+  if (!data) return;
+
   renderDashboard();
   renderActivities();
   renderTimeline();
@@ -805,10 +807,6 @@ function renderAll() {
   renderResources();
   renderGoals();
 }
-
-renderAll();
-
-openPage(localStorage.getItem("emsPlannerCurrentPage") || "dashboard");
 
 document.getElementById("toggleClassification").addEventListener("click", () => {
   classificationVisible = !classificationVisible;
@@ -840,9 +838,6 @@ startAuth(async (user) => {
 
   setCurrentUser(user);
   data = await loadPlanner(defaultData);
-
-  renderAll();
-  openPage(localStorage.getItem("emsPlannerCurrentPage") || "dashboard");
 });
 
 window.toggleEdit = toggleEdit;
