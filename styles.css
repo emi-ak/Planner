@@ -1116,84 +1116,88 @@ a {
   border: 1px solid var(--border);
 }
 
-body.theme-cream {
-  --pink-50: #faf9f7;
-  --pink-100: #d6d1c7;
-  --pink-200: #d2c4b5;
-  --pink-300: #bfbab2;
-  --pink-500: #999287;
-  --pink-700: #736d64;
-  
-  --text: #36312c;
-  --muted: #918b83;
-  --border: rgba(210, 170, 100, 0.42);
-  
-  --orb-1: #d2c4b5;
-  --orb-2: #f2e7dc;
-  --orb-3: #b0a294;
-  
-  --bg-1: #f0eae1;
-  --bg-2: #e6dacc;
-  --bg-3: #fffdf8;  
-  --theme-button-bg: rgba(214, 209, 199, 0.85);
+body.theme-butter {
+  --pink-50: #fffef2;
+  --pink-100: #fff6cf;
+  --pink-200: #ffeeb0;
+  --pink-300: #ffe28a;
+  --pink-500: #e8c95d;
+  --pink-700: #c79f2f;
 
-  --logoborder: rgba(209, 199, 180, 0.70);
-  --logoshadow: rgba(176, 162, 148, 0.18);
-  
-  --nav-link-background: rgba(242, 231, 220, 0.84);
-  --nav-link-border: rgba(191, 186, 178, 0.18);
-  
-  --textarea-border: rgba(191, 186, 178, 0.22);
-  --textarea-background: rgba(250, 249, 247, 0.78);
-  --focusboxshadow: rgba(153, 146, 135, 0.12);
-  
-  --softbtn-background: rgba(242, 231, 220, 0.90);
-  --softbtn-border: rgba(191, 186, 178, 0.18);
-  
-  --ringcard-border: rgba(210, 196, 181, 0.45);
-  --progress-ring-gradient: rgba(230, 218, 204, 0.95);
-  
-  --actvitybackground: rgba(250, 245, 239, 0.74);
-  --activitypull-border: rgba(191, 186, 178, 0.14);
-  
-  --badge-background: rgba(242, 231, 220, 0.92);
-  
-  --goalborder: rgba(210, 196, 181, 0.45);
-  --pinoutline: rgba(153, 146, 135, 0.32);
-  
-  --editpanel-background: rgba(250, 249, 247, 0.72);
-  --editpanel-border: rgba(191, 186, 178, 0.16);
-  
-  --gradescale-border: rgba(191, 186, 178, 0.16);
-  --gradescale-background: rgba(242, 231, 220, 0.76);
-  
-  --assignmentcard-border: rgba(191, 186, 178, 0.14);
-  --assignmentcard-background: rgba(250, 245, 239, 0.74);
-  
-  --modulesummarybackground: rgba(242, 231, 220, 0.84);
-  --pinplaceholder-background: rgba(242, 231, 220, 0.72);
-  
-  --importancehigh-background: rgba(115, 109, 100, 0.92);
-  --importancemed-background: rgba(210, 196, 181, 0.92);
-  --importancelow-background: rgba(250, 245, 239, 0.92);
-  
-  --yearbox-border: rgba(210, 196, 181, 0.58);
-  
-  --usercard-back: rgba(242, 231, 220, 0.65);
-  --syncback: rgba(242, 231, 220, 0.62);
+  --text: #58481f;
+  --muted: #9a885d;
+  --border: rgba(232, 201, 93, 0.42);
 
-  --glass: rgba(255, 252, 248, 0.56);
-  --glass-strong: rgba(255, 252, 248, 0.76);
-  --sidebar-background: rgba(255, 252, 248, 0.48);
-  --hero-background: rgba(255, 250, 246, 0.44);
-  --ring-center: rgba(255, 253, 250, 0.90);
-  --settings-hover: rgba(242, 231, 220, 0.65);
-  --yearbox-background: rgba(255, 252, 248, 0.50);
-  --shadow: 0 24px 70px rgba(115, 109, 100, 0.16);
+  --orb-1: #fff0b8;
+  --orb-2: #fff8dc;
+  --orb-3: #ffe08a;
 
-  --primary:var(--pink-500)
-  --primary-dark: var(--pink-700)
-  --primary-light: var(--pink-300)
+  --bg-1: #fff6d7;
+  --bg-2: #ffefbe;
+  --bg-3: #fffdf8;
+
+  --theme-button-bg: rgba(255, 247, 205, 0.85);
+
+  --logoborder: rgba(232, 201, 93, 0.45);
+  --logoshadow: rgba(199, 159, 47, 0.16);
+
+  --nav-link-background: rgba(255, 247, 205, 0.84);
+  --nav-link-border: rgba(232, 201, 93, 0.18);
+
+  --textarea-border: rgba(232, 201, 93, 0.20);
+  --textarea-background: rgba(255, 253, 244, 0.78);
+  --focusboxshadow: rgba(232, 201, 93, 0.12);
+
+  --softbtn-background: rgba(255, 247, 205, 0.90);
+  --softbtn-border: rgba(232, 201, 93, 0.18);
+
+  --ringcard-border: rgba(255, 226, 138, 0.45);
+  --progress-ring-gradient: rgba(255, 244, 191, 0.95);
+
+  --actvitybackground: rgba(255, 251, 233, 0.74);
+  --activitypull-border: rgba(232, 201, 93, 0.14);
+
+  --badge-background: rgba(255, 247, 205, 0.92);
+
+  --goalborder: rgba(255, 226, 138, 0.45);
+  --pinoutline: rgba(199, 159, 47, 0.32);
+
+  --editpanel-background: rgba(255, 253, 244, 0.72);
+  --editpanel-border: rgba(232, 201, 93, 0.16);
+
+  --gradescale-border: rgba(232, 201, 93, 0.16);
+  --gradescale-background: rgba(255, 247, 205, 0.76);
+
+  --assignmentcard-border: rgba(232, 201, 93, 0.14);
+  --assignmentcard-background: rgba(255, 251, 233, 0.74);
+
+  --modulesummarybackground: rgba(255, 247, 205, 0.84);
+  --pinplaceholder-background: rgba(255, 247, 205, 0.72);
+
+  --importancehigh-background: rgba(199, 159, 47, 0.92);
+  --importancemed-background: rgba(255, 226, 138, 0.92);
+  --importancelow-background: rgba(255, 251, 233, 0.92);
+
+  --yearbox-border: rgba(255, 226, 138, 0.58);
+
+  --usercard-back: rgba(255, 247, 205, 0.65);
+  --syncback: rgba(255, 247, 205, 0.62);
+
+  --glass: rgba(255, 254, 246, 0.56);
+  --glass-strong: rgba(255, 254, 246, 0.76);
+
+  --sidebar-background: rgba(255, 254, 246, 0.48);
+  --hero-background: rgba(255, 252, 239, 0.44);
+  --ring-center: rgba(255, 255, 249, 0.90);
+
+  --settings-hover: rgba(255, 247, 205, 0.65);
+  --yearbox-background: rgba(255, 254, 246, 0.50);
+
+  --shadow: 0 24px 70px rgba(199, 159, 47, 0.16);
+
+  --primary: var(--pink-500);
+  --primary-dark: var(--pink-700);
+  --primary-light: var(--pink-300);
 }
 
 body.theme-sage {
