@@ -6,15 +6,6 @@ let data = null;
 
 let classificationVisible = false;
 
-function percent(done, goal) {
-  if (!goal) return 0;
-  return Math.min(100, Math.round((done / goal) * 100));
-}
-
-function totalHours(category) {
-  return category.activities.reduce((sum, a) => sum + Number(a.hours || 0), 0);
-}
-
 function classifyUK(mark) {
   if (mark >= 70) return "1st Honors";
   if (mark >= 60) return "2:1 Honors";
@@ -37,21 +28,6 @@ function averageOfModuleTotals() {
   if (!totals.length) return "";
   const average = totals.reduce((sum, value) => sum + Number(value), 0) / totals.length;
   return average.toFixed(1);
-}
-
-function removeById(collection, id) {
-  if (!confirm("Are you sure you want to delete this?")) return;
-  data[collection] = data[collection].filter(item => item.id !== id);
-  save();
-}
-
-function safeConfirmDelete(message = "Are you sure you want to delete this?") {
-  return confirm(message);
-}
-
-function toggleEdit(id) {
-  const el = document.getElementById(id);
-  if (el) el.classList.toggle("open");
 }
 
 const sidebar = document.getElementById("sidebar");
@@ -704,14 +680,6 @@ function toggleGoal(id) {
   const goal = data.goals.find(g => g.id === id);
   goal.done = !goal.done;
   save();
-}
-
-function escapeHTML(value) {
-  return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;");
 }
 
 function renderAll() {
