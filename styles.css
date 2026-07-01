@@ -1085,3 +1085,52 @@ main {
 .sync-status.offline {
   color: #8b6b7c;
 }
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.theme-choice {
+  background: rgba(255, 234, 244, 0.85);
+  color: var(--pink-700);
+  border: 1px solid var(--border);
+}
+
+body.theme-cream {
+  --pink-50: #fffdf8;
+  --pink-100: #fff5df;
+  --pink-200: #f5dfb8;
+  --pink-300: #e8c88f;
+  --pink-500: #c89445;
+  --pink-700: #8a5d1f;
+  --text: #3f3020;
+  --muted: #8b7356;
+  --border: rgba(210, 170, 100, 0.42);
+}
+
+body.theme-sage {
+  --pink-50: #f8fff9;
+  --pink-100: #eaf7ec;
+  --pink-200: #cfe8d3;
+  --pink-300: #a9d1b0;
+  --pink-500: #6ba878;
+  --pink-700: #3f744b;
+  --text: #26382b;
+  --muted: #6a806f;
+  --border: rgba(120, 170, 130, 0.42);
+}
+
+body.theme-lavender {
+  --pink-50: #fcf8ff;
+  --pink-100: #f3eaff;
+  --pink-200: #e1d0fb;
+  --pink-300: #c8aef0;
+  --pink-500: #9873d1;
+  --pink-700: #68459d;
+  --text: #33263d;
+  --muted: #786b8b;
+  --border: rgba(190, 165, 230, 0.45);
+}
