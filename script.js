@@ -878,3 +878,25 @@ draftFields.forEach(field => {
     localStorage.setItem(`draft-${field.id}`, field.value);
   });
 });
+
+function applyTheme(theme) {
+  document.body.classList.remove(
+    "theme-cream",
+    "theme-sage",
+    "theme-lavender"
+  );
+
+  if (theme !== "pink") {
+    document.body.classList.add(`theme-${theme}`);
+  }
+
+  localStorage.setItem("emsPlannerTheme", theme);
+}
+
+document.querySelectorAll(".theme-choice").forEach(button => {
+  button.addEventListener("click", () => {
+    applyTheme(button.dataset.theme);
+  });
+});
+
+applyTheme(localStorage.getItem("emsPlannerTheme") || "pink");
