@@ -1552,11 +1552,12 @@ body.theme-orange {
   color: var(--text);
   border: 1px solid var(--border);
   box-shadow: none;
-  padding: 14px 15px;
+  padding: 10px 15px;
   text-align: left;
   border-radius: 18px;
   font-size: 18px;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .settings-button .icon {
