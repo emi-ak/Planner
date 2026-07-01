@@ -1,6 +1,6 @@
-const todayISO = new Date().toISOString().slice(0, 10);
+export const todayISO = new Date().toISOString().slice(0, 10);
 
-const defaultData = {
+export const defaultData = {
   categories: [
     { id: crypto.randomUUID(), name: "Volunteering", goal: 120, activities: [
       { id: crypto.randomUUID(), name: "Community health volunteering", date: todayISO, hours: 12, notes: "Helped with patient-facing community support." }
