@@ -884,6 +884,8 @@ function applyTheme(theme) {
     "theme-cream",
     "theme-sage",
     "theme-lavender"
+    "theme-blue"
+    "theme-orange"
   );
 
   if (theme !== "pink") {
