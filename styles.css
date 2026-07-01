@@ -1116,6 +1116,7 @@ body.theme-cream {
     linear-gradient(135deg, #f0eae1 0%, #e6dacc 42%, #fffdf8 100%);
   display: flex;
   overflow-x: hidden;
+  
 }
 
 body.theme-sage {
