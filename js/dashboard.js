@@ -1,5 +1,8 @@
 import { percent } from "./utils.js";
 import { db } from "./firebase.js";
+import { getData } from "./state.js";
+
+const data = getData();
 
 export function ringHTML(name, done, goal) {
   const p = percent(done, goal);
