@@ -1,20 +1,8 @@
 import { startAuth } from "./auth.js";
 import { setCurrentUser, loadPlanner } from "./database.js";
 import { defaultData } from "./data.js";
-
-import "./navigation.js";
-import "./theme.js";
-import "./forms.js";
-import "./dashboard.js";
-import "./activities.js";
-import "./coursework.js";
-import "./timeline.js";
-import "./vision.js";
-import "./affirmation.js";
-import "./resources.js";
-import "./todo.js";
-
 import { setData } from "./state.js";
+
 import { renderAll } from "./renderall.js";
 import { openPage } from "./navigation.js";
 
@@ -26,7 +14,10 @@ import { updateAffirmation } from "./affirmation.js";
 import { updateResource } from "./resources.js";
 import { updateGoal, toggleGoal } from "./todo.js";
 
-import {setData} from "./state.js";
+import "./theme.js";
+import "./forms.js";
+import "./dashboard.js";
+import "./vision.js";
 
 document.querySelectorAll(".form-toggle").forEach(button => {
   button.addEventListener("click", () => {
