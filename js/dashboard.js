@@ -1,3 +1,16 @@
+function ringHTML(name, done, goal) {
+  const p = percent(done, goal);
+  return `
+    <div class="ring-card">
+      <div class="progress-ring" style="--value:${p}">
+        <span>${p}%</span>
+      </div>
+      <p class="ring-label">${name}</p>
+      <p class="ring-sub">${done} / ${goal} hrs</p>
+    </div>
+  `;
+}
+
 function renderDashboard() {
   const completedHours = data.categories.reduce((sum, c) => sum + totalHours(c), 0);
   const goalHours = data.categories.reduce((sum, c) => sum + Number(c.goal || 0), 0);
