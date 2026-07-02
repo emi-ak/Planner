@@ -1,4 +1,4 @@
-function renderAll() {
+export function renderAll() {
   if (!data) return;
 
   renderDashboard();
