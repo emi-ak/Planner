@@ -1,3 +1,7 @@
+import { getData } from "./state.js";
+
+const data = getData();
+
 export function renderTimeline() {
   const sorted = [...data.timeline].sort((a, b) => new Date(a.date) - new Date(b.date));
   timelineList.innerHTML = sorted.map((t, index) => `
