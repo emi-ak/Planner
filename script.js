@@ -4,8 +4,6 @@ import { defaultData, todayISO } from "./js/data.js";
 
 let data = null;
 
-let classificationVisible = false;
-
 function renderVision() {
   visionBoard.innerHTML = data.vision.map((v, index) => `
     <div class="pin" draggable="true" data-index="${index}">
@@ -191,19 +189,6 @@ function renderAll() {
   renderResources();
   renderGoals();
 }
-
-document.getElementById("toggleClassification").addEventListener("click", () => {
-  classificationVisible = !classificationVisible;
-
-  const moduleAverage = averageOfModuleTotals();
-  const classification = moduleAverage ? classifyUK(Number(moduleAverage)) : "—";
-
-  document.getElementById("dashClassification").textContent =
-    classificationVisible ? classification : "";
-
-  document.getElementById("toggleClassification").textContent =
-    classificationVisible ? "Hide" : "Show";
-});
 
 document.querySelectorAll(".form-toggle").forEach(button => {
   button.addEventListener("click", () => {
