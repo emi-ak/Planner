@@ -1,18 +1,18 @@
-import { startAuth } from "./js/auth.js";
-import { setCurrentUser, loadPlanner, savePlanner } from "./js/database.js";
-import { defaultData, todayISO } from "./js/data.js";
+import { startAuth } from "./auth.js";
+import { setCurrentUser, loadPlanner } from "./database.js";
+import { defaultData } from "./data.js";
 
-import "./js/navigation.js";
-import "./js/theme.js";
-import "./js/forms.js";
-import "./js/dashboard.js";
-import "./js/activities.js";
-import "./js/coursework.js";
-import "./js/timeline.js";
-import "./js/vision.js";
-import "./js/affirmations.js";
-import "./js/resources.js";
-import "./js/todo.js";
+import "./navigation.js";
+import "./theme.js";
+import "./forms.js";
+import "./dashboard.js";
+import "./activities.js";
+import "./coursework.js";
+import "./timeline.js";
+import "./vision.js";
+import "./affirmation.js";
+import "./resources.js";
+import "./todo.js";
 
 let data = null;
 let classificationVisible = false;
