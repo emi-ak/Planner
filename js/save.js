@@ -4,6 +4,8 @@ import { getData } from "./state.js";
 
 export async function save() {
     const data = getData();
+    if (!data) return;
+
     const syncStatus = document.getElementById("syncStatus");
 
     if (syncStatus) {
