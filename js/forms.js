@@ -1,9 +1,9 @@
 import { getData } from "./state.js";
-
-const data = getData();
+import { save } from "./save.js";
 
 document.getElementById("categoryForm").addEventListener("submit", e => {
   e.preventDefault();
+  const data = getData();
   data.categories.push({
     id: crypto.randomUUID(),
     name: categoryName.value,
@@ -19,6 +19,7 @@ document.getElementById("categoryForm").addEventListener("submit", e => {
 
 document.getElementById("activityForm").addEventListener("submit", e => {
   e.preventDefault();
+  const data = getData();
   const category = data.categories.find(c => c.id === activityCategory.value);
   category.activities.push({
     id: crypto.randomUUID(),
@@ -36,6 +37,7 @@ document.getElementById("activityForm").addEventListener("submit", e => {
 
 document.getElementById("timelineForm").addEventListener("submit", e => {
   e.preventDefault();
+  const data = getData();
   data.timeline.push({
     id: crypto.randomUUID(),
     title: timelineTitle.value,
@@ -52,6 +54,7 @@ document.getElementById("timelineForm").addEventListener("submit", e => {
 
 document.getElementById("moduleForm").addEventListener("submit", e => {
   e.preventDefault();
+  const data = getData();
   data.modules.push({
     id: crypto.randomUUID(),
     name: moduleName.value,
@@ -68,6 +71,7 @@ document.getElementById("moduleForm").addEventListener("submit", e => {
 
 document.getElementById("assignmentForm").addEventListener("submit", e => {
   e.preventDefault();
+  const data = getData();
   const module = data.modules.find(m => m.id === assignmentModule.value);
   module.assignments.push({
     id: crypto.randomUUID(),
@@ -85,6 +89,7 @@ document.getElementById("assignmentForm").addEventListener("submit", e => {
 
 document.getElementById("visionForm").addEventListener("submit", e => {
   e.preventDefault();
+  const data = getData();
   const file = visionImageFile.files[0];
   if (!file) return;
 
@@ -107,6 +112,7 @@ document.getElementById("visionForm").addEventListener("submit", e => {
 
 document.getElementById("affirmationForm").addEventListener("submit", e => {
   e.preventDefault();
+  const data = getData();
   data.affirmations.push({
     id: crypto.randomUUID(),
     date: affirmationDate.value,
@@ -120,9 +126,11 @@ document.getElementById("affirmationForm").addEventListener("submit", e => {
 });
 
 document.getElementById("shuffleAffirmation").addEventListener("click", renderRandomAffirmation);
+const data = getData();
 
 document.getElementById("resourceForm").addEventListener("submit", e => {
   e.preventDefault();
+  const data = getData();
   data.resources.push({
     id: crypto.randomUUID(),
     title: resourceTitle.value,
@@ -138,6 +146,7 @@ document.getElementById("resourceForm").addEventListener("submit", e => {
 
 document.getElementById("goalForm").addEventListener("submit", e => {
   e.preventDefault();
+  const data = getData();
   data.goals.push({
     id: crypto.randomUUID(),
     text: goalText.value,
