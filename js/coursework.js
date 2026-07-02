@@ -1,3 +1,5 @@
+let classificationVisible = false;
+
 function classifyUK(mark) {
   if (mark >= 70) return "1st Honors";
   if (mark >= 60) return "2:1 Honors";
@@ -159,3 +161,16 @@ function deleteAssignment(moduleId, assignmentId) {
   module.assignments = module.assignments.filter(a => a.id !== assignmentId);
   save();
 }
+
+document.getElementById("toggleClassification").addEventListener("click", () => {
+  classificationVisible = !classificationVisible;
+
+  const moduleAverage = averageOfModuleTotals();
+  const classification = moduleAverage ? classifyUK(Number(moduleAverage)) : "—";
+
+  document.getElementById("dashClassification").textContent =
+    classificationVisible ? classification : "";
+
+  document.getElementById("toggleClassification").textContent =
+    classificationVisible ? "Hide" : "Show";
+});
