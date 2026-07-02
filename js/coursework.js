@@ -1,8 +1,7 @@
 import { getData } from "./state.js";
 
-const data = getData();
-
 export function classifyUK(mark) {
+  const data = getData();
   if (mark >= 70) return "1st Honors";
   if (mark >= 60) return "2:1 Honors";
   if (mark >= 50) return "2:2 Honors";
@@ -12,6 +11,7 @@ export function classifyUK(mark) {
 }
 
 export function moduleTotal(module) {
+  const data = getData();
   const assignments = module.assignments || [];
   const totalWeight = assignments.reduce((sum, a) => sum + Number(a.weight || 0), 0);
   if (!assignments.length || totalWeight === 0) return "";
@@ -20,6 +20,7 @@ export function moduleTotal(module) {
 }
 
 export function averageOfModuleTotals() {
+  const data = getData();
   const totals = data.modules.map(m => moduleTotal(m)).filter(v => v !== "");
   if (!totals.length) return "";
   const average = totals.reduce((sum, value) => sum + Number(value), 0) / totals.length;
@@ -27,6 +28,7 @@ export function averageOfModuleTotals() {
 }
 
 export function renderModules() {
+  const data = getData();
   assignmentModule.innerHTML = data.modules
     .map(m => `<option value="${m.id}">${m.year || "No Year"} — ${m.name} — ${m.term}</option>`)
     .join("");
@@ -140,6 +142,7 @@ export function renderModules() {
 }
 
 export function updateModule(id) {
+  const data = getData();
   const module = data.modules.find(m => m.id === id);
   module.name = document.getElementById(`module-name-${id}`).value;
   module.term = document.getElementById(`module-term-${id}`).value;
@@ -148,6 +151,7 @@ export function updateModule(id) {
 }
 
 export function updateAssignment(moduleId, assignmentId) {
+  const data = getData();
   const module = data.modules.find(m => m.id === moduleId);
   const assignment = module.assignments.find(a => a.id === assignmentId);
   assignment.name = document.getElementById(`assignment-name-${assignmentId}`).value;
@@ -158,6 +162,7 @@ export function updateAssignment(moduleId, assignmentId) {
 }
 
 export function deleteAssignment(moduleId, assignmentId) {
+  const data = getData();
   if (!safeConfirmDelete()) return;
   const module = data.modules.find(m => m.id === moduleId);
   module.assignments = module.assignments.filter(a => a.id !== assignmentId);
