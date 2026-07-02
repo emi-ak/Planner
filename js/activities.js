@@ -2,9 +2,8 @@ import { save } from "./save.js";
 import { percent } from "./utils.js";
 import { getData} from "./state.js"}
 
-const data = getData();
-
 export function renderActivities() {
+  const data = getData();
   activityCategory.innerHTML = data.categories.map(c => `<option value="${c.id}">${c.name}</option>`).join("");
 
   activityList.innerHTML = data.categories.map(c => {
