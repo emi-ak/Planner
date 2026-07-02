@@ -32,3 +32,11 @@ function updateAffirmation(id) {
   affirmation.text = document.getElementById(`affirmation-text-${id}`).value;
   save();
 }
+
+const shuffleButton = document.getElementById("shuffleAffirmation");
+
+if (shuffleButton) {
+  shuffleButton.addEventListener("click", () => {
+    renderRandomAffirmation();
+  });
+}
