@@ -1,14 +1,14 @@
-function importanceRank(value) {
+export function importanceRank(value) {
   return { High: 0, Medium: 1, Low: 2 }[value] ?? 3;
 }
 
-function importanceClass(value) {
+export function importanceClass(value) {
   if (value === "High") return "importance-high";
   if (value === "Medium") return "importance-medium";
   return "importance-low";
 }
 
-function renderGoals() {
+export function renderGoals() {
   const sorted = [...data.goals].sort((a, b) => {
     const importanceDiff = importanceRank(a.importance) - importanceRank(b.importance);
     if (importanceDiff !== 0) return importanceDiff;
@@ -45,7 +45,7 @@ function renderGoals() {
   `).join("");
 }
 
-function updateGoal(id) {
+export function updateGoal(id) {
   const goal = data.goals.find(g => g.id === id);
   goal.text = document.getElementById(`goal-text-${id}`).value;
   goal.dueDate = document.getElementById(`goal-date-${id}`).value;
@@ -54,7 +54,7 @@ function updateGoal(id) {
   save();
 }
 
-function toggleGoal(id) {
+export function toggleGoal(id) {
   const goal = data.goals.find(g => g.id === id);
   goal.done = !goal.done;
   save();
