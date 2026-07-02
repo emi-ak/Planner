@@ -1,8 +1,7 @@
 import { getData } from "./state.js";
 
-const data = getData();
-
 export function renderResources() {
+  const data = getData();
   resourceList.innerHTML = data.resources.map(r => `
     <div class="item">
       <h3>${r.url ? `<a href="${r.url}" target="_blank">${r.title}</a>` : r.title}</h3>
@@ -22,6 +21,7 @@ export function renderResources() {
 }
 
 export function updateResource(id) {
+  const data = getData();
   const resource = data.resources.find(r => r.id === id);
   resource.title = document.getElementById(`resource-title-${id}`).value;
   resource.url = document.getElementById(`resource-url-${id}`).value;
