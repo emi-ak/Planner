@@ -1,9 +1,9 @@
-function renderRandomAffirmation() {
+export function renderRandomAffirmation() {
   const random = data.affirmations[Math.floor(Math.random() * data.affirmations.length)];
   affirmationText.textContent = random ? random.text : "Add your first affirmation.";
 }
 
-function renderAffirmations() {
+export function renderAffirmations() {
   renderRandomAffirmation();
   affirmationList.innerHTML = data.affirmations.map(a => `
     <div class="item">
@@ -26,7 +26,7 @@ function renderAffirmations() {
   `).join("");
 }
 
-function updateAffirmation(id) {
+export function updateAffirmation(id) {
   const affirmation = data.affirmations.find(a => a.id === id);
   affirmation.date = document.getElementById(`affirmation-date-${id}`).value;
   affirmation.text = document.getElementById(`affirmation-text-${id}`).value;
