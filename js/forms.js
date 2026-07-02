@@ -23,6 +23,7 @@ document.getElementById("activityForm").addEventListener("submit", e => {
   const data = getData();
   if (!data) return;
   const category = data.categories.find(c => c.id === activityCategory.value);
+  if (!category) return;
   category.activities.push({
     id: crypto.randomUUID(),
     name: activityName.value,
@@ -78,6 +79,7 @@ document.getElementById("assignmentForm").addEventListener("submit", e => {
   const data = getData();
   if (!data) return;
   const module = data.modules.find(m => m.id === assignmentModule.value);
+  if (!module) return;
   module.assignments.push({
     id: crypto.randomUUID(),
     name: assignmentName.value,
