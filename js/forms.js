@@ -126,7 +126,6 @@ document.getElementById("affirmationForm").addEventListener("submit", e => {
 });
 
 document.getElementById("shuffleAffirmation").addEventListener("click", renderRandomAffirmation);
-const data = getData();
 
 document.getElementById("resourceForm").addEventListener("submit", e => {
   e.preventDefault();
