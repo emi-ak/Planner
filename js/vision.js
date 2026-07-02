@@ -1,3 +1,7 @@
+import { getData } from "./state.js";
+
+const data = getData();
+
 export function renderVision() {
   visionBoard.innerHTML = data.vision.map((v, index) => `
     <div class="pin" draggable="true" data-index="${index}">
