@@ -2,9 +2,8 @@ import { percent } from "./utils.js";
 import { db } from "./firebase.js";
 import { getData } from "./state.js";
 
-const data = getData();
-
 export function ringHTML(name, done, goal) {
+  const data = getData();
   const p = percent(done, goal);
   return `
     <div class="ring-card">
@@ -18,6 +17,7 @@ export function ringHTML(name, done, goal) {
 }
 
 export function renderDashboard() {
+  const data = getData();
   const completedHours = data.categories.reduce((sum, c) => sum + totalHours(c), 0);
   const goalHours = data.categories.reduce((sum, c) => sum + Number(c.goal || 0), 0);
   const moduleAverage = averageOfModuleTotals();
