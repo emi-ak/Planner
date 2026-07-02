@@ -1,3 +1,7 @@
+import { getData } from "./state.js";
+
+const data = getData();
+
 export function renderRandomAffirmation() {
   const random = data.affirmations[Math.floor(Math.random() * data.affirmations.length)];
   affirmationText.textContent = random ? random.text : "Add your first affirmation.";
