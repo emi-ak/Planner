@@ -1,4 +1,4 @@
-function classifyUK(mark) {
+export function classifyUK(mark) {
   if (mark >= 70) return "1st Honors";
   if (mark >= 60) return "2:1 Honors";
   if (mark >= 50) return "2:2 Honors";
@@ -7,7 +7,7 @@ function classifyUK(mark) {
   return "Fail";
 }
 
-function moduleTotal(module) {
+export function moduleTotal(module) {
   const assignments = module.assignments || [];
   const totalWeight = assignments.reduce((sum, a) => sum + Number(a.weight || 0), 0);
   if (!assignments.length || totalWeight === 0) return "";
@@ -15,14 +15,14 @@ function moduleTotal(module) {
   return weighted.toFixed(1);
 }
 
-function averageOfModuleTotals() {
+export function averageOfModuleTotals() {
   const totals = data.modules.map(m => moduleTotal(m)).filter(v => v !== "");
   if (!totals.length) return "";
   const average = totals.reduce((sum, value) => sum + Number(value), 0) / totals.length;
   return average.toFixed(1);
 }
 
-function renderModules() {
+export function renderModules() {
   assignmentModule.innerHTML = data.modules
     .map(m => `<option value="${m.id}">${m.year || "No Year"} — ${m.name} — ${m.term}</option>`)
     .join("");
@@ -135,7 +135,7 @@ function renderModules() {
     : "Classification: —";
 }
 
-function updateModule(id) {
+export function updateModule(id) {
   const module = data.modules.find(m => m.id === id);
   module.name = document.getElementById(`module-name-${id}`).value;
   module.term = document.getElementById(`module-term-${id}`).value;
@@ -143,7 +143,7 @@ function updateModule(id) {
   save();
 }
 
-function updateAssignment(moduleId, assignmentId) {
+export function updateAssignment(moduleId, assignmentId) {
   const module = data.modules.find(m => m.id === moduleId);
   const assignment = module.assignments.find(a => a.id === assignmentId);
   assignment.name = document.getElementById(`assignment-name-${assignmentId}`).value;
@@ -153,7 +153,7 @@ function updateAssignment(moduleId, assignmentId) {
   save();
 }
 
-function deleteAssignment(moduleId, assignmentId) {
+export function deleteAssignment(moduleId, assignmentId) {
   if (!safeConfirmDelete()) return;
   const module = data.modules.find(m => m.id === moduleId);
   module.assignments = module.assignments.filter(a => a.id !== assignmentId);
