@@ -1,4 +1,4 @@
-function applyTheme(theme) {
+export function applyTheme(theme) {
   document.body.classList.remove(
     "theme-butter",
     "theme-sage",
