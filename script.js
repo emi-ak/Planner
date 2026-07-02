@@ -3,6 +3,7 @@ import { setCurrentUser, loadPlanner, savePlanner } from "./js/database.js";
 import { defaultData, todayISO } from "./js/data.js";
 
 let data = null;
+let classificationVisible = false;
 
 document.querySelectorAll(".form-toggle").forEach(button => {
   button.addEventListener("click", () => {
@@ -14,21 +15,6 @@ document.querySelectorAll(".form-toggle").forEach(button => {
 
     button.textContent = isOpen ? `− ${label}` : `+ ${label}`;
   });
-});
-
-startAuth(async (user) => {
-  console.log("Signed in as:", user.email);
-
-  setCurrentUser(user);
-  data = await loadPlanner(defaultData);
-
-  data.modules = (data.modules || []).map(module => ({
-    ...module,
-    year: module.year || "Year 1"
-  }));
-
-  renderAll();
-  openPage(localStorage.getItem("emsPlannerCurrentPage") || "dashboard");
 });
 
 window.toggleEdit = toggleEdit;
