@@ -1,4 +1,4 @@
-function renderResources() {
+export function renderResources() {
   resourceList.innerHTML = data.resources.map(r => `
     <div class="item">
       <h3>${r.url ? `<a href="${r.url}" target="_blank">${r.title}</a>` : r.title}</h3>
@@ -17,7 +17,7 @@ function renderResources() {
   `).join("");
 }
 
-function updateResource(id) {
+export function updateResource(id) {
   const resource = data.resources.find(r => r.id === id);
   resource.title = document.getElementById(`resource-title-${id}`).value;
   resource.url = document.getElementById(`resource-url-${id}`).value;
