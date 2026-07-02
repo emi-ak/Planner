@@ -4,7 +4,7 @@ import { getData} from "./state.js"}
 
 const data = getData();
 
-function renderActivities() {
+export function renderActivities() {
   activityCategory.innerHTML = data.categories.map(c => `<option value="${c.id}">${c.name}</option>`).join("");
 
   activityList.innerHTML = data.categories.map(c => {
@@ -56,7 +56,7 @@ function renderActivities() {
   }).join("");
 }
 
-function updateActivity(categoryId, activityId) {
+export function updateActivity(categoryId, activityId) {
   const category = data.categories.find(c => c.id === categoryId);
   const activity = category.activities.find(a => a.id === activityId);
   activity.name = document.getElementById(`activity-name-${activityId}`).value;
@@ -66,20 +66,20 @@ function updateActivity(categoryId, activityId) {
   save();
 }
 
-function updateCategory(id) {
+export function updateCategory(id) {
   const category = data.categories.find(c => c.id === id);
   category.name = document.getElementById(`category-name-${id}`).value;
   category.goal = Number(document.getElementById(`category-goal-${id}`).value);
   save();
 }
 
-function deleteCategory(id) {
+export function deleteCategory(id) {
   if (!safeConfirmDelete("Delete this activity category and all activities inside it?")) return;
   data.categories = data.categories.filter(c => c.id !== id);
   save();
 }
 
-function deleteActivity(categoryId, activityId) {
+export function deleteActivity(categoryId, activityId) {
   if (!safeConfirmDelete()) return;
   const category = data.categories.find(c => c.id === categoryId);
   category.activities = category.activities.filter(a => a.id !== activityId);
