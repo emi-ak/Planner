@@ -36,3 +36,18 @@ export function startAuth(onLogin) {
     }
   });
 }
+
+startAuth(async (user) => {
+  console.log("Signed in as:", user.email);
+
+  setCurrentUser(user);
+  data = await loadPlanner(defaultData);
+
+  data.modules = (data.modules || []).map(module => ({
+    ...module,
+    year: module.year || "Year 1"
+  }));
+
+  renderAll();
+  openPage(localStorage.getItem("emsPlannerCurrentPage") || "dashboard");
+});
