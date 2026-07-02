@@ -12,7 +12,7 @@ import "./js/timeline.js";
 import "./js/vision.js";
 import "./js/affirmations.js";
 import "./js/resources.js";
-import "./js/goals.js";
+import "./js/todo.js";
 
 let data = null;
 let classificationVisible = false;
